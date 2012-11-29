@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "Linux Biolinum O External";
+  font-style: normal;
+  font-weight: bold;
+  src: url('LinBiolinum_Bd.eot');
+}
+@font-face {
+  font-family: "Linux Biolinum O External";
+  font-style: italic;
+  font-weight: normal;
+  src: url('LinBiolinum_It.eot');
+}
+@font-face {
+  font-family: "Linux Biolinum O External";
+  font-style: normal;
+  font-weight: normal;
+  src: url('LinBiolinum_Re.eot');
+}
+@font-face {
+  font-family: "Linux Libertine O External";
+  font-style: normal;
+  font-weight: bold;
+  src: url('LinLibertine_Bd.eot');
+}
+@font-face {
+  font-family: "Linux Libertine O External";
+  font-style: italic;
+  font-weight: bold;
+  src: url('LinLibertine_BI.eot');
+}
+@font-face {
+  font-family: "Linux Libertine O External";
+  font-style: italic;
+  font-weight: normal;
+  src: url('LinLibertine_It.eot');
+}
+@font-face {
+  font-family: "Linux Libertine O External";
+  font-style: normal;
+  font-weight: normal;
+  src: url('LinLibertine_Re.eot');
+}
+@font-face {
+  font-family: "Linux Biolinum O External";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Linux Biolinum O Bold"),
+       url("LinBiolinum_Bd.otf") format("opentype"),
+       url("LinBiolinum_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Linux Biolinum O External";
+  font-style: italic;
+  font-weight: normal;
+  src: local("Linux Biolinum O Italic"),
+       url("LinBiolinum_It.otf") format("opentype"),
+       url("LinBiolinum_It.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Linux Biolinum O External";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Linux Biolinum O"),
+       url("LinBiolinum_Re.otf") format("opentype"),
+       url("LinBiolinum_Re.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Linux Libertine O External";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Linux Libertine O Bold"),
+       url("LinLibertine_Bd.otf") format("opentype"),
+       url("LinLibertine_Bd.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Linux Libertine O External";
+  font-style: italic;
+  font-weight: bold;
+  src: local("Linux Libertine O Bold Italic"),
+       url("LinLibertine_BI.otf") format("opentype"),
+       url("LinLibertine_BI.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Linux Libertine O External";
+  font-style: italic;
+  font-weight: normal;
+  src: local("Linux Libertine O Italic"),
+       url("LinLibertine_It.otf") format("opentype"),
+       url("LinLibertine_It.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Linux Libertine O External";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Linux Libertine O"),
+       url("LinLibertine_Re.otf") format("opentype"),
+       url("LinLibertine_Re.ttf") format("truetype");
+}
+body {
+	font-family: "Linux Libertine O", "Linux Libertine O External", serif;
+	background: #afbdd3;
+margin: 0px;
+}
+#container {
+	max-width: 757px;
+	box-shadow: 0px 0px 10px #444444;
+	border-left: 1px solid #a9a9a9;
+	border-right: 1px solid #a9a9a9;
+	border-bottom: 1px solid #a9a9a9;
+	padding: 1em;
+	background: white;
+	margin: 0px auto;
+}
+@media screen and (max-width: 790px) {
+	#container {
+		padding: 0.5em;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		box-shadow: none;
+		border: none;
+		margin: none;
+	}
+}
+#header {
+	display: block;
+	background: url('header.jpg');
+	background-repeat: no-repeat;
+	max-width: 757px;
+	height: 207px;
+	padding-left: 0.5em;
+	margin: 0px auto;
+	text-decoration: none;
+	font-family: "Linux Biolinum O", "Linux Biolinum O External", sans-serif;
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+}
+#main_title {
+	padding-top: 0.05em;
+	font-size: 36pt;
+	display: block;
+}
+#main_subtitle {
+	font-size: 12pt;
+	display: block;
+}
+#navigation {
+	text-align: center;
+	font-family: "Linux Biolinum O", "Linux Biolinum O External", sans-serif;
+}
+@media print {
+	#container {
+		padding: 0.5em;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		box-shadow: none;
+		border: none;
+		margin: none;
+	}
+	#header {
+		background: white;
+		height: auto;
+		padding-left: 0px;
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid gray;
+		text-shadow: none;
+		color: black;
+	}
+	#navigation {
+		display: none;
+	} 
+}
+#navigation a {
+	display: inline-block;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: black;
+	padding: 0.4em;
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	background: #f5f4b3;
+	background: #d7dee9;
+	text-decoration: none;
+}
+a.selected {
+	font-weight: bold;
+}
+a#register {
+	background: #ffc0c0;
+}
+#footer {
+	border-top: 1px solid gray;
+	padding-top: 1em;
+	font-size: 80%;
+	color: gray;
+}
