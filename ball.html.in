@@ -1,0 +1,41 @@
+	<h1>Ball</h1>
+	<img src="images/allemande.png" width="400" height="293" alt="Image of dancers" class="floatright">
+
+	<p>The Youth Weekend West ball will be held on Saturday, May 5th at the
+Washington Dance Club in downtown Seattle. We invite dancers of all ages to
+attend. Join us for hors d'oeuvres 7:00 pm. The Grand March begins at 7:30 pm.
+<a href="ball-program.pdf">Dance notes</a> are avalailable for the Ball
+program. You may also <a
+href="http://danciemaetion.imaginationprocessing.com/YWW12.htm"
+target="new">watch animations</a> of these dances.</p>
+
+	<h2>Location</h2>
+	<p><a href="http://www.washingtondance.com/" target="new">Washington Dance Club</a><br>
+	1017 Stewart Street<br>
+	Seattle, WA</p>
+
+	<p>Washington Dance Club is located just two blocks west of I-5 on the
+corner of Stewart and Boren Streets near the Convention Center. Parking on the
+street is free after 8:00 p.m. There is a parking lot directly across the
+street that charges $5 in the evening, and many other pay lots in the area.
+</p>
+
+	<h2>Program</h2>
+	<div class="program">
+		<p>Wild Geese<br>
+		MacDonald of the Isles<br>
+		Miss Johnstone of Ardrosson<br>
+		Pelorus Jack<br>
+		Delvine Side<br>
+		Major Ian Stewart<br>
+		The Minister on the Loch<br>
+		Shiftin' Bobbins</p>
+		<p><em>Intermission</em></p>
+		<p>Swashbuckling Iain<br>
+		Monymusk<br>
+		Hamilton Rant<br>
+		John McAlpin<br>
+		Sleepy Maggie<br>
+		Rothesay Rant<br>
+		Flowers of Edinburgh<br><br></p>
+	</div>

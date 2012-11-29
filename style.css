@@ -196,3 +196,10 @@ a#register {
 	font-size: 80%;
 	color: gray;
 }
+#obsolete {
+	margin: 0.2em;
+	margin-top: 1em;
+	padding: 0.2em;
+	border: 1px solid #ffff80;
+	background: #ffffd0;
+}

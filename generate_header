@@ -1,0 +1,59 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+	echo "Usage: $0 output_file"
+	exit 1
+fi
+
+TITLE="$(grep "^$1," files | cut -d , -f 2)"
+OBSOLETE="$(grep "^$1," files | cut -d , -f 3)"
+if [ "$1" != "index.html" ]; then
+	TITLE="YWW 2013: ${TITLE}"
+fi
+
+cat >> "$1" << EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>${TITLE}</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
+</head>
+<body>
+    <div id="container">
+	<a href="index.html" id="header">
+		<span id="main_title">Youth Weekend West</span>
+		<span id="main_subtitle">May 3-5, 2013 in Vancouver, Wash.</span>
+	</a>
+
+	<div id="navigation">
+EOF
+cat files | while IFS=, read file title obsolete visible junk; do
+	if [ "${file:0:1}" = "#" -o "${file}" = "index.html" ]; then
+		continue
+	fi
+	if [ "${visible}" != "yes" ]; then
+		continue
+	fi
+	class=
+	if [ "$1" = "${file}" ]; then
+		class=" class=\"selected\""
+	fi
+	id="$(echo "${file}" | sed -e 's/.html$//g')"
+	echo "		<a href=\"${file}\" id=\"${id}\"${class}>${title}</a>" >> "$1"
+done
+
+cat >> "$1" << EOF
+	</div>
+
+EOF
+
+if [ "${OBSOLETE}" != "no" ]; then
+	cat >> "$1" << EOF
+	<div id="obsolete"><strong>Notice:</strong> This page has not been updated with 2013 information.  Please check back later.</div>
+EOF
+fi
+
+exit 0

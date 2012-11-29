@@ -1,0 +1,94 @@
+	<h1>Register!</h1>
+
+	<img src="images/dance3.jpg" width="203" height="300" alt="Dancers" class="floatright">
+
+	<p>The Youth Weekend West workshop is open to dancers aged 12 to 30ish.
+Full registration for the workshop includes lunch, housing, all classes
+including electives, dancing at the Ceilidh, and admittance to the Ball. The
+commuter package is the same as the full package, but excludes housing.
+Registration for the Ball only is also available for all ages.</p>
+
+	<p>If you fall at the end of the 30ish range and aren't sure if you
+qualify, please register. If you are enthusiastic about dancing, we want you to
+join us! Email our <a href="mailto:yww2012registrar@gmail.com">registrar</a> if
+you have any questions. </p>
+
+	<p>The <strong>early bird deadline</strong> for discounts on
+registration fees is April 1, 2012.</p>
+
+	<h4>Registration Fees and Deadlines</h4>
+	<table border="1" cellspacing="0" cellpadding="10">
+	<tr>
+		<td rowspan="2"><strong>Full Package</strong><br>Workshop and accommodation <br>at <a href="queen-anne-inn.pdf" target="new">Queen Anne Inn</a></td>
+		<td>$135 (early bird)</td>
+	</tr>
+	<tr>
+		<td>$150 (after April 1)*</td>
+	</tr>
+	<tr>
+		<td rowspan="2"><strong>Full Package</strong><br>Workshop and accommodation <br>at <a href="http://www.hostelseattle.com/" target="new">City Hostel Seattle</a></td>
+		<td>$105 (early bird)</td>
+	</tr>
+	<tr>
+		<td>$130 (after April 1)*</td>
+	</tr>
+	<tr>
+		<td rowspan="2"><strong>Commuter Package</strong><br>No accommodation</td>
+		<td>$80 (early bird)</td>
+	</tr>
+	<tr>
+		<td>$90 (after April 1)</td>
+	</tr>
+	<tr>
+		<td rowspan="2"><strong>Ball Only</strong></td>
+		<td>$12 Student</td>
+	</tr>
+	<tr>
+		<td>$25 Non-student</td>
+	</tr>
+	</table>
+
+	<a href="yww-brochure.pdf" target="new"><img src="images/brochure.png" width="75" height="200" alt="Download brochure" class="floatright"></a>
+	<p>* We have a limited number of spaces reserved at City Hostel and
+Queen Anne Inn. Register early to guarantee a room. Accommodation cannot be
+guaranteed after April 1.</p>
+
+	<p>Rooms at the Queen Anne Inn are for 2-3 people. Rooms at the City
+Hostel are for 4 people. All rooms have a bathroom ensuite. If you do not list
+a roommate on your registration form, you will be assigned to a room with one
+or more dancers from the workshop.</p>
+
+	<p>Please complete the <a href="registration-form.pdf"
+target="new">registration form</a> (separate forms must be submitted for each
+individual) and email it to <a
+href="mailto:yww2012registrar@gmail.com">yww2012registrar@gmail.com</a> or mail
+it to our registrar at the address below. You may pay online or send a check
+(written out to YWW 2012) to our registrar. If you are under 18, please also
+ask your parent/guardian to complete and sign this <a
+href="child-liability-waiver.pdf" target="new">waiver</a> and mail it to:</p>
+
+	<p><strong>Lizzie Wratten, YWW 2012 Registrar</strong><br>
+	1123 N 199th St<br>
+	Shoreline, WA 98133<br>
+	USA</p>
+
+	<form action="broken! https://www.paypal.com/cgi-bin/webscr" method="post">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="ENQLEXTEEJS5U">
+	<table>
+	<tr><td><input type="hidden" name="on0" value="Choose your package type:">Choose your package type:</td></tr><tr><td><select name="os0">
+	       <option value="Full Package - Workshop with accommodation (Queen Anne Inn)">Full Package - Workshop with accommodation (Queen Anne Inn) $150.00 USD</option>
+	       <option value="Full Package - Workshop with accommodation (City Hostel)">Full Package - Workshop with accommodation (City Hostel) $130.00 USD</option>
+	       <option value="Commuter Package - Workshop only (No Accommodation)">Commuter Package - Workshop only (No Accommodation) $90.00 USD</option>
+	       <option value="Ball Only - No workshop or accommodation (Student)">Ball Only - No workshop or accommodation (Student) $12.00 USD</option>
+	       <option value="Ball Only - No workshop or accommodation (Non-Student)">Ball Only - No workshop or accommodation (Non-Student) $25.00 USD</option>
+	</select> </td></tr>
+	</table>
+	<input type="hidden" name="currency_code" value="USD">
+	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	</form>
+
+	<p>If you do not receive a payment confirmation within one week of
+submission please email <a
+href="mailto:yww2012registrar@gmail.com">yww2012registrar@gmail.com</a>.</p>
