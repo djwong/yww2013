@@ -1,13 +1,13 @@
 TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html
-DESTDIR=obj/
+DESTDIR=output/
 INSTALL=install
 
 all: $(TARGETS)
 
 install: $(TARGETS) $(FILES)
 	$(INSTALL) -d $(DESTDIR)
-	$(INSTALL) $(TARGETS) $(DESTDIR)
-	$(INSTALL) $(FILES) $(DESTDIR)
+	$(INSTALL) -m 0644 $(TARGETS) $(DESTDIR)
+	$(INSTALL) -m 0644 $(FILES) $(DESTDIR)
 
 %.html: %.html.in footer files generate_header
 	./generate_header $@
