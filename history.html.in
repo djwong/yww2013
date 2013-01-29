@@ -15,13 +15,8 @@ href="http://www.eecis.udel.edu/~harvey/ValleyOverTheHill32R3C.pdf">The Valley
 Over the Hill</a> 32R3C (taught by Terry Harvey)</p>
 
 	<p>Pictures from previous years are in this slideshow:
-	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-width="700" height="700" id="ssidx"><param name="movie"
-value="http://cdn.smugmug.com/ria/ShizamSlides-2009120303.swf?AlbumID=11002611&amp;AlbumKey=H3Rm6&amp;transparent=true&amp;bgColor=&amp;borderThickness=&amp;borderColor=&amp;useInside=&amp;endPoint=&amp;mainHost=cdn.smugmug.com&amp;VersionNos=2009120303&amp;width=600&amp;height=600&amp;clickToImage=true&amp;captions=true&amp;showThumbs=true&amp;autoStart=true&amp;showSpeed=true&amp;pageStyle=black&amp;showButtons=true&amp;randomStart=false&amp;randomize=true&amp;splash=http%3A%2F%2Fwww.smugmug.com%2Fimg%2Fria%2FShizamSlides%2Fsmugmug_black.png&amp;splashDelay=0&amp;crossFadeSpeed=350"><param
-name="wmode" value="transparent"><param name="allowNetworking"
-value="all"><param name="allowScriptAccess" value="always"><embed
-src="http://cdn.smugmug.com/ria/ShizamSlides-2009120303.swf?AlbumID=11002611&amp;AlbumKey=H3Rm6&amp;transparent=true&amp;bgColor=&amp;borderThickness=&amp;borderColor=&amp;useInside=&amp;endPoint=&amp;mainHost=cdn.smugmug.com&amp;VersionNos=2009120303&amp;width=600&amp;height=600&amp;clickToImage=true&amp;captions=true&amp;showThumbs=true&amp;autoStart=true&amp;showSpeed=true&amp;pageStyle=black&amp;showButtons=true&amp;randomStart=false&amp;randomize=true&amp;splash=http%3A%2F%2Fwww.smugmug.com%2Fimg%2Fria%2FShizamSlides%2Fsmugmug_black.png&amp;splashDelay=0&amp;crossFadeSpeed=350"
-width="600" height="600" wmode="transparent"
-type="application/x-shockwave-flash" allowScriptAccess="always"
-allowNetworking="all"  ></embed></object>
+	<object type="application/x-shockwave-flash" width="100%" height="600" data="http://cdn.smugmug.com/ria/ShizamSlides-2009120303.swf?AlbumID=11002611&amp;AlbumKey=H3Rm6&amp;transparent=true&amp;bgColor=&amp;borderThickness=&amp;borderColor=&amp;useInside=&amp;endPoint=&amp;mainHost=cdn.smugmug.com&amp;VersionNos=2009120303&amp;width=600&amp;height=600&amp;clickToImage=true&amp;captions=true&amp;showThumbs=true&amp;autoStart=true&amp;showSpeed=true&amp;pageStyle=black&amp;showButtons=true&amp;randomStart=false&amp;randomize=true&amp;splash=http%3A%2F%2Fwww.smugmug.com%2Fimg%2Fria%2FShizamSlides%2Fsmugmug_black.png&amp;splashDelay=0&amp;crossFadeSpeed=350">
+		<param name="movie" value="http://cdn.smugmug.com/ria/ShizamSlides-2009120303.swf?AlbumID=11002611&amp;AlbumKey=H3Rm6&amp;transparent=true&amp;bgColor=&amp;borderThickness=&amp;borderColor=&amp;useInside=&amp;endPoint=&amp;mainHost=cdn.smugmug.com&amp;VersionNos=2009120303&amp;width=600&amp;height=600&amp;clickToImage=true&amp;captions=true&amp;showThumbs=true&amp;autoStart=true&amp;showSpeed=true&amp;pageStyle=black&amp;showButtons=true&amp;randomStart=false&amp;randomize=true&amp;splash=http%3A%2F%2Fwww.smugmug.com%2Fimg%2Fria%2FShizamSlides%2Fsmugmug_black.png&amp;splashDelay=0&amp;crossFadeSpeed=350"></param>
+		<param name="wmode" value="transparent"></param>
+	</object>
 	</p>
