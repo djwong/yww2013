@@ -133,6 +133,7 @@ margin: 0px;
 	font-family: "Linux Biolinum O", "Linux Biolinum O External", sans-serif;
 	color: white;
 	text-shadow: 2px 2px 2px #000000;
+	position: relative;
 }
 #main_title {
 	padding-top: 0.05em;
@@ -142,6 +143,15 @@ margin: 0px;
 #main_subtitle {
 	font-size: 12pt;
 	display: block;
+}
+#main_descr {
+	font-size: 12pt;
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	color: #c0c0c0;
+	margin: 3px;
 }
 #navigation {
 	text-align: center;

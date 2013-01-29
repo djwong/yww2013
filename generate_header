@@ -5,9 +5,10 @@ if [ -z "$1" ]; then
 	exit 1
 fi
 
-TITLE="$(grep "^$1," files | cut -d , -f 2)"
-OBSOLETE="$(grep "^$1," files | cut -d , -f 3)"
-BACKGROUND="$(grep "^$1," files | cut -d , -f 5)"
+TITLE="$(grep "^$1;" files | cut -d ';' -f 2)"
+OBSOLETE="$(grep "^$1;" files | cut -d ';' -f 3)"
+BACKGROUND="$(grep "^$1;" files | cut -d ';' -f 5)"
+DESCR="$(grep "^$1;" files | cut -d ';' -f 6)"
 if [ "$1" != "index.html" ]; then
 	TITLE="YWW 2013: ${TITLE}"
 fi
@@ -37,11 +38,12 @@ cat > "$1" << EOF
 	<a href="index.html" id="header">
 		<span id="main_title">Youth Weekend West</span>
 		<span id="main_subtitle">May 3-5, 2013 in Vancouver, Wash.</span>
+		<span id="main_descr">${DESCR}</span>
 	</a>
 
 	<div id="navigation">
 EOF
-cat files | while IFS=, read file title obsolete visible junk; do
+cat files | while IFS=';' read file title obsolete visible junk; do
 	if [ "${file:0:1}" = "#" -o "${file}" = "index.html" ]; then
 		continue
 	fi
