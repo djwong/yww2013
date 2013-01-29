@@ -182,6 +182,9 @@ body {
 	#main_descr {
 		display: none;
 	}
+	#footer {
+		display: none;
+	}
 }
 #navigation a {
 	display: inline-block;
