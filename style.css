@@ -99,7 +99,7 @@
 body {
 	font-family: "Linux Libertine O", "Linux Libertine O External", serif;
 	background: #afbdd3;
-margin: 0px;
+	margin: 0px;
 }
 #container {
 	max-width: 757px;
@@ -179,6 +179,9 @@ margin: 0px;
 	#navigation {
 		display: none;
 	} 
+	#main_descr {
+		display: none;
+	}
 }
 #navigation a {
 	display: inline-block;
