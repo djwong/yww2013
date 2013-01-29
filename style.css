@@ -1,103 +1,5 @@
-@font-face {
-  font-family: "Linux Biolinum O External";
-  font-style: normal;
-  font-weight: bold;
-  src: url('LinBiolinum_Bd.eot');
-}
-@font-face {
-  font-family: "Linux Biolinum O External";
-  font-style: italic;
-  font-weight: normal;
-  src: url('LinBiolinum_It.eot');
-}
-@font-face {
-  font-family: "Linux Biolinum O External";
-  font-style: normal;
-  font-weight: normal;
-  src: url('LinBiolinum_Re.eot');
-}
-@font-face {
-  font-family: "Linux Libertine O External";
-  font-style: normal;
-  font-weight: bold;
-  src: url('LinLibertine_Bd.eot');
-}
-@font-face {
-  font-family: "Linux Libertine O External";
-  font-style: italic;
-  font-weight: bold;
-  src: url('LinLibertine_BI.eot');
-}
-@font-face {
-  font-family: "Linux Libertine O External";
-  font-style: italic;
-  font-weight: normal;
-  src: url('LinLibertine_It.eot');
-}
-@font-face {
-  font-family: "Linux Libertine O External";
-  font-style: normal;
-  font-weight: normal;
-  src: url('LinLibertine_Re.eot');
-}
-@font-face {
-  font-family: "Linux Biolinum O External";
-  font-style: normal;
-  font-weight: bold;
-  src: local("Linux Biolinum O Bold"),
-       url("LinBiolinum_Bd.otf") format("opentype"),
-       url("LinBiolinum_Bd.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Biolinum O External";
-  font-style: italic;
-  font-weight: normal;
-  src: local("Linux Biolinum O Italic"),
-       url("LinBiolinum_It.otf") format("opentype"),
-       url("LinBiolinum_It.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Biolinum O External";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Linux Biolinum O"),
-       url("LinBiolinum_Re.otf") format("opentype"),
-       url("LinBiolinum_Re.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Libertine O External";
-  font-style: normal;
-  font-weight: bold;
-  src: local("Linux Libertine O Bold"),
-       url("LinLibertine_Bd.otf") format("opentype"),
-       url("LinLibertine_Bd.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Libertine O External";
-  font-style: italic;
-  font-weight: bold;
-  src: local("Linux Libertine O Bold Italic"),
-       url("LinLibertine_BI.otf") format("opentype"),
-       url("LinLibertine_BI.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Libertine O External";
-  font-style: italic;
-  font-weight: normal;
-  src: local("Linux Libertine O Italic"),
-       url("LinLibertine_It.otf") format("opentype"),
-       url("LinLibertine_It.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Linux Libertine O External";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Linux Libertine O"),
-       url("LinLibertine_Re.otf") format("opentype"),
-       url("LinLibertine_Re.ttf") format("truetype");
-}
 body {
-	font-family: "Linux Libertine O", "Linux Libertine O External", serif;
+	font-family: "Palatino Linotype", "Book Antiqua", serif;
 	background: #afbdd3;
 	margin: 0px;
 }
@@ -123,6 +25,7 @@ body {
 	}
 }
 #header {
+	font-family: "Trebuchet MS", sans-serif;
 	display: block;
 	background-repeat: no-repeat;
 	max-width: 757px;
@@ -130,7 +33,6 @@ body {
 	padding-left: 0.5em;
 	margin: 0px auto;
 	text-decoration: none;
-	font-family: "Linux Biolinum O", "Linux Biolinum O External", sans-serif;
 	color: white;
 	text-shadow: 2px 2px 2px #000000;
 	position: relative;
@@ -154,8 +56,8 @@ body {
 	margin: 3px;
 }
 #navigation {
+	font-family: "Trebuchet MS", sans-serif;
 	text-align: center;
-	font-family: "Linux Biolinum O", "Linux Biolinum O External", sans-serif;
 }
 @media print {
 	#container {

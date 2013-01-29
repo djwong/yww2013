@@ -38,6 +38,7 @@ LinLibertine_It.ttf \
 LinLibertine_Re.eot \
 LinLibertine_Re.otf \
 LinLibertine_Re.ttf \
+fonts.css \
 style.css \
 classes.jpg \
 contact.jpg \
