@@ -44,4 +44,5 @@ contact.jpg \
 header.jpg \
 history.jpg \
 musicians.jpg \
-schedule.jpg
+schedule.jpg \
+register.jpg
