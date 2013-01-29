@@ -1,9 +1,9 @@
 #filename,title,obsolete,visible
 index.html,Youth Weekend West 2013,no,yes
 history.html,History,no,yes
-schedule.html,Schedule,yes,yes
-classes.html,Classes,yes,yes
+schedule.html,Schedule,no,yes
+classes.html,Classes,no,yes
 ball.html,Ball,no,yes
-staff.html,Teachers &amp; Musicians,yes,yes
+staff.html,Teachers &amp; Musicians,no,yes
 contact.html,Contact,no,yes
 register.html,Register!,yes,yes
