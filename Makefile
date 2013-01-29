@@ -39,4 +39,10 @@ LinLibertine_Re.eot \
 LinLibertine_Re.otf \
 LinLibertine_Re.ttf \
 header.jpg \
-style.css
+style.css \
+classes.jpg \
+contact.jpg \
+header.jpg \
+history.jpg \
+musicians.jpg \
+schedule.jpg
