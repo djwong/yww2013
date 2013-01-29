@@ -1,9 +1,9 @@
-#filename,title,obsolete,visible
-index.html,Youth Weekend West 2013,no,yes
-history.html,History,no,yes
-schedule.html,Schedule,no,yes
-classes.html,Classes,no,yes
-ball.html,Ball,no,yes
-staff.html,Teachers &amp; Musicians,no,yes
-contact.html,Contact,no,yes
-register.html,Register!,yes,yes
+#filename,title,obsolete,visible,background
+index.html,Youth Weekend West 2013,no,yes,header
+history.html,History,no,yes,history
+schedule.html,Schedule,no,yes,schedule
+classes.html,Classes,no,yes,classes
+ball.html,Ball,no,yes,header
+staff.html,Teachers &amp; Musicians,no,yes,musicians
+contact.html,Contact,no,yes,contact
+register.html,Register!,yes,yes,header

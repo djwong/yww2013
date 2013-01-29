@@ -7,6 +7,7 @@ fi
 
 TITLE="$(grep "^$1," files | cut -d , -f 2)"
 OBSOLETE="$(grep "^$1," files | cut -d , -f 3)"
+BACKGROUND="$(grep "^$1," files | cut -d , -f 5)"
 if [ "$1" != "index.html" ]; then
 	TITLE="YWW 2013: ${TITLE}"
 fi
@@ -20,6 +21,11 @@ cat > "$1" << EOF
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
+	<style><!--
+#header {
+	background: url('${BACKGROUND}.jpg');
+}
+//--></style>
 </head>
 <body>
     <div id="container">
