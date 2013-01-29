@@ -203,3 +203,8 @@ a#register {
 	border: 1px solid #ffff80;
 	background: #ffffd0;
 }
+.map {
+	border: 1px solid #c0c0c0;
+	width: 100%;
+	height: 425px;
+}
