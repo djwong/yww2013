@@ -45,4 +45,6 @@ header.jpg \
 history.jpg \
 musicians.jpg \
 schedule.jpg \
-register.jpg
+register.jpg \
+lindamae.jpg \
+lindy.jpg
