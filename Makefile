@@ -17,25 +17,19 @@ install: $(TARGETS) $(FILES)
 clean:
 	rm -rf $(TARGETS) $(DESTDIR)
 
-FILES=LinBiolinum_Bd.eot \
+FILES=\
 LinBiolinum_Bd.otf \
 LinBiolinum_Bd.ttf \
-LinBiolinum_It.eot \
 LinBiolinum_It.otf \
 LinBiolinum_It.ttf \
-LinBiolinum_Re.eot \
 LinBiolinum_Re.otf \
 LinBiolinum_Re.ttf \
-LinLibertine_Bd.eot \
 LinLibertine_Bd.otf \
 LinLibertine_Bd.ttf \
-LinLibertine_BI.eot \
 LinLibertine_BI.otf \
 LinLibertine_BI.ttf \
-LinLibertine_It.eot \
 LinLibertine_It.otf \
 LinLibertine_It.ttf \
-LinLibertine_Re.eot \
 LinLibertine_Re.otf \
 LinLibertine_Re.ttf \
 fonts.css \
