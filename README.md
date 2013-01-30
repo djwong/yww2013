@@ -1,4 +1,4 @@
 yww2013
 =======
 
-Youth Weekend West 2013 Website
+This is the Youth Weekend West 2013 website repository.
