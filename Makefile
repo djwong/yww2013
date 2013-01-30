@@ -9,6 +9,11 @@ install: $(TARGETS) $(FILES)
 	$(INSTALL) -m 0644 $(TARGETS) $(DESTDIR)
 	$(INSTALL) -m 0644 $(FILES) $(DESTDIR)
 
+.PHONY: install upload
+
+upload: install
+	./send-to-server
+
 %.html: %.html.in footer files generate_header
 	./generate_header $@
 	cat $< >> $@

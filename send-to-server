@@ -3,4 +3,4 @@
 lcd output/
 set ftp:ssl-allow false
 open ftp://youthweekendwest@procyongames.com@ftp.youthweekendwest.com/
-mirror --reverse --verbose --delete --only-newer --no-perms --exclude-glob 2012/ --dry-run
+mirror --reverse --verbose --delete --only-newer --no-perms --exclude-glob 2012/
