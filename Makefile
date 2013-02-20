@@ -1,4 +1,4 @@
-TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html
+TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html register_test.html
 DESTDIR=output/
 INSTALL=install
 

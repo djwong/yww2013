@@ -1,0 +1,194 @@
+	<h1>Register!</h1>
+
+<div class="ss-top-of-page">
+
+<div class="ss-form-heading">
+<p></p>
+<div class="ss-form-desc ss-no-ignore-whitespace">REGISTRATION includes a Welcome Ceilidh, two days of SCD classes and electives, lunch on Saturday, a ball-walk through, a ticket for the "Dance Among the Stars" dinner and ball, and shared hotel accommodations at the Comfort Inn on 401 E 13th Street, Vancouver, WA.</p><p>Group accommodation is offered at the Vancouver, WA Comfort Inn and will be two double beds shared by four YWW dancers of the same gender. A complimentary hot breakfast buffet is offered each morning.</p><p>Please submit one registration form for each individual attending. Confirmation of registration will be sent up on receipt of payment.</p><p></p><p></p></div>
+
+<hr class="ss-email-break" style="display:none;">
+<div class="ss-required-asterisk">* Required</div></div></div>
+<div class="ss-form"><form action="https://docs.google.com/forms/d/1Q18aqu98GeA_uA0LEngm5Ul1nVJ0PGagp4xKDr9ApA0/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+<div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">About You</h2>
+<div class="ss-section-description ss-no-ignore-whitespace">Please let us know a few things about yourself, such as who you are, and how we can contact you.</div>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1"><div class="ss-q-title">What is your name?
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<input name="entry.1" value="" class="ss-q-short" id="entry_1" dir="auto" aria-required="true" type="text">
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_2"><div class="ss-q-title">Age
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<input name="entry.2" value="" class="ss-q-short" id="entry_2" dir="auto" aria-required="true" type="text">
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1002"><div class="ss-q-title">Gender
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.3" value="Man" id="group_3_1" class="ss-q-radio" aria-label="Man" type="radio">
+<label class="ss-choice-label" for="group_3_1">Man</label></label></li> <li class="ss-choice-item"><label><input name="entry.3" value="Woman" id="group_3_2" class="ss-q-radio" aria-label="Woman" type="radio">
+<label class="ss-choice-label" for="group_3_2">Woman</label></label></li> <li class="ss-choice-item"><label><input name="entry.3" value="It's complicated" id="group_3_3" class="ss-q-radio" aria-label="It's complicated" type="radio">
+<label class="ss-choice-label" for="group_3_3">It's complicated</label></label></li></ul></div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_13"><div class="ss-q-title">Please describe any food allergies or preferences that we should know about:
+</div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<textarea name="entry.13" rows="8" cols="0" class="ss-q-long" id="entry_13" dir="auto"></textarea>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_4"><div class="ss-q-title">Postal Address
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<textarea name="entry.4" rows="8" cols="0" class="ss-q-long" id="entry_4" dir="auto" aria-required="true"></textarea>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_5"><div class="ss-q-title">Telephone
+</div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<input name="entry.5" value="" class="ss-q-short" id="entry_5" dir="auto" type="text">
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_6"><div class="ss-q-title">Email
+</div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<input name="entry.6" value="" class="ss-q-short" id="entry_6" dir="auto" type="text">
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_846225001"><div class="ss-q-title">How would you prefer we contact you?
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.474036997" value="Email" id="group_474036997_1" class="ss-q-radio" aria-label="Email" type="radio">
+<label class="ss-choice-label" for="group_474036997_1">Email</label></label></li> <li class="ss-choice-item"><label><input name="entry.474036997" value="Telephone" id="group_474036997_2" class="ss-q-radio" aria-label="Telephone" type="radio">
+<label class="ss-choice-label" for="group_474036997_2">Telephone</label></label></li> <li class="ss-choice-item"><label><input name="entry.474036997" value="Postal mail" id="group_474036997_3" class="ss-q-radio" aria-label="Postal mail" type="radio">
+<label class="ss-choice-label" for="group_474036997_3">Postal mail</label></label></li></ul></div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_7"><div class="ss-q-title">Parent/Guardian contact information (if under 18)
+</div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<textarea name="entry.7" rows="8" cols="0" class="ss-q-long" id="entry_7" dir="auto"></textarea>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Package Levels</h2>
+<div class="ss-section-description ss-no-ignore-whitespace">We offer two packages: a full package, which includes all dancing activities and a hotel reservation; and a commuter package, which does not include the hotel.  Full packages are $100, and commuter packages are $75.
+
+After April 1, those prices go up to $110 and $90, respectively.  We _cannot_ guarantee a hotel reservation after April 1st.
+
+If you only wish to attend the dinner and the ball, please use this separate registration form: <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.rscds-swws.org%2F2013-dinnerdance-among-stars-flyer.pdf&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEhBlYmwcJpFa8cQoCdgbEcw70jAQ">http://www.rscds-swws.org/2013-dinnerdance-among-stars-flyer.pdf</a>
+
+Please write a check or a money order made out to "RSCDS, Southwest Washington State Branch" and send it to:
+YWW 2013
+c/o Mintz P.O. Box #261
+Battle Ground, WA 98604-0261
+USA.
+
+You may also pay via PayPal (insert link here).
+
+XXX: Do we accept Canadian money?</div>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1009"><div class="ss-q-title">Which package would you like?
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.10" value="Class + Dancing + Lodging ($100)" id="group_10_1" class="ss-q-radio" aria-label="Class + Dancing + Lodging ($100)" type="radio">
+<label class="ss-choice-label" for="group_10_1">Class + Dancing + Lodging ($100)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Class + Dancing ($75)" id="group_10_2" class="ss-q-radio" aria-label="Class + Dancing ($75)" type="radio">
+<label class="ss-choice-label" for="group_10_2">Class + Dancing ($75)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Dancing ($35) (XXX: should we even offer this option here?)" id="group_10_3" class="ss-q-radio" aria-label="Dancing ($35) (XXX: should we even offer this option here?)" type="radio">
+<label class="ss-choice-label" for="group_10_3">Dancing ($35) (XXX: should we even offer this option here?)</label></label></li></ul></div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_62760471"><div class="ss-q-title">How will you pay us?
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.2066431272" value="I will pay via check or money order." id="group_2066431272_1" class="ss-q-radio" aria-label="I will pay via check or money order." type="radio">
+<label class="ss-choice-label" for="group_2066431272_1">I will pay via check or money order.</label></label></li> <li class="ss-choice-item"><label><input name="entry.2066431272" value="I will pay via PayPal." id="group_2066431272_2" class="ss-q-radio" aria-label="I will pay via PayPal." type="radio">
+<label class="ss-choice-label" for="group_2066431272_2">I will pay via PayPal.</label></label></li></ul></div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_560824854"><div class="ss-q-title">PayPal information
+</div>
+<div class="ss-q-help" dir="ltr">If you're paying with PayPal, please enter either the transaction ID they gave you, or the email address you supplied to PayPal, so that we can match your registration and payment.</div></label>
+<input name="entry.560824854" value="" class="ss-q-short" id="entry_560824854" dir="auto" type="text">
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Scottish Country Dancing Experience</h2>
+<div class="ss-section-description ss-no-ignore-whitespace"></div>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_12"><div class="ss-q-title">How many years have you been dancing?
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<input name="entry.12" value="" class="ss-q-short" id="entry_12" dir="auto" aria-required="true" type="text">
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1203549286"><div class="ss-q-title">How many times a week do you dance?
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<input name="entry.1203549286" value="" class="ss-q-short" id="entry_1203549286" dir="auto" aria-required="true" type="text">
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Activities</h2>
+<div class="ss-section-description ss-no-ignore-whitespace"></div>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1309607816"><div class="ss-q-title">Which elective class will you take?
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.641744574" value="Thriller Zombie Dance" id="group_641744574_1" class="ss-q-radio" aria-label="Thriller Zombie Dance" type="radio">
+<label class="ss-choice-label" for="group_641744574_1">Thriller Zombie Dance</label></label></li> <li class="ss-choice-item"><label><input name="entry.641744574" value="Norman Folk Dancing" id="group_641744574_2" class="ss-q-radio" aria-label="Norman Folk Dancing" type="radio">
+<label class="ss-choice-label" for="group_641744574_2">Norman Folk Dancing</label></label></li> <li class="ss-choice-item"><label><input name="entry.641744574" value="I'll skip the elective class." id="group_641744574_3" class="ss-q-radio" aria-label="I'll skip the elective class." type="radio">
+<label class="ss-choice-label" for="group_641744574_3">I'll skip the elective class.</label></label></li></ul></div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_2059925908"><div class="ss-q-title">Do you intend to stay for the ball walk-through?
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.1424211747" value="Yes, I will attend the walk-through." id="group_1424211747_1" class="ss-q-radio" aria-label="Yes, I will attend the walk-through." type="radio">
+<label class="ss-choice-label" for="group_1424211747_1">Yes, I will attend the walk-through.</label></label></li> <li class="ss-choice-item"><label><input name="entry.1424211747" value="No, I will not." id="group_1424211747_2" class="ss-q-radio" aria-label="No, I will not." type="radio">
+<label class="ss-choice-label" for="group_1424211747_2">No, I will not.</label></label></li></ul></div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_798331101"><div class="ss-q-title">Are you coming to the Friday night ceildh?
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.1125084082" value="Yes, I will attend." id="group_1125084082_1" class="ss-q-radio" aria-label="Yes, I will attend." type="radio">
+<label class="ss-choice-label" for="group_1125084082_1">Yes, I will attend.</label></label></li> <li class="ss-choice-item"><label><input name="entry.1125084082" value="No, I cannot make it." id="group_1125084082_2" class="ss-q-radio" aria-label="No, I cannot make it." type="radio">
+<label class="ss-choice-label" for="group_1125084082_2">No, I cannot make it.</label></label></li></ul></div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_399341518"><div class="ss-q-title">If you'd like to perform an act at the Friday ceildh, please describe it here:
+</div>
+<div class="ss-q-help" dir="ltr">The Friday night Ceilidh is a chance for you and the other workshop participants to show off your talents.</div></label>
+<textarea name="entry.399341518" rows="8" cols="0" class="ss-q-long" id="entry_399341518" dir="auto"></textarea>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Other</h2>
+<div class="ss-section-description ss-no-ignore-whitespace"></div>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_14"><div class="ss-q-title">If you'd like to request specific roommate(s), please do so here:
+</div>
+<div class="ss-q-help" dir="ltr">Note: If you do not specify a group of four, we will assign 4 people of the same gender to a room.</div></label>
+<textarea name="entry.14" rows="8" cols="0" class="ss-q-long" id="entry_14" dir="auto"></textarea>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_919871729"><div class="ss-q-title">Anything else we ought to know about?
+</div>
+<div class="ss-q-help" dir="ltr"></div></label>
+<textarea name="entry.919871729" rows="8" cols="0" class="ss-q-long" id="entry_919871729" dir="auto"></textarea>
+</div></div></div>
+<input name="draftResponse" value="[]
+" type="hidden">
+<input name="pageHistory" value="0" type="hidden">
+
+
+<div class="ss-item ss-navigate"><div class="ss-form-entry">
+<input name="submit" value="Submit" id="ss-submit" type="submit"></div></div></form></div>
+
+<h2>broken paypal form:</h2>
+	<form action="broken! https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="ENQLEXTEEJS5U">
+	<table>
+	<tr><td><input type="hidden" name="on0" value="Choose your package type:">Choose your package type:</td></tr><tr><td><select name="os0">
+	       <option value="Full Package - Workshop with accommodation (Queen Anne Inn)">Full Package - Workshop with accommodation (Queen Anne Inn) $150.00 USD</option>
+	       <option value="Full Package - Workshop with accommodation (City Hostel)">Full Package - Workshop with accommodation (City Hostel) $130.00 USD</option>
+	       <option value="Commuter Package - Workshop only (No Accommodation)">Commuter Package - Workshop only (No Accommodation) $90.00 USD</option>
+	       <option value="Ball Only - No workshop or accommodation (Student)">Ball Only - No workshop or accommodation (Student) $12.00 USD</option>
+	       <option value="Ball Only - No workshop or accommodation (Non-Student)">Ball Only - No workshop or accommodation (Non-Student) $25.00 USD</option>
+	</select> </td></tr>
+	</table>
+	<input type="hidden" name="currency_code" value="USD">
+	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	</form>
+
+	<p>If you do not receive a payment confirmation within one week of
+payment, please email <a
+href="mailto:yww2013@yahoo.com">yww2013@yahoo.com</a>.</p>
+

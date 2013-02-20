@@ -125,3 +125,246 @@ a#register {
 	width: 100%;
 	height: 470px;
 }
+
+/* Imported stuff from Google forms */
+.ss-logo-link {
+display : block;
+}
+.ss-logo {
+border : none;
+height : 23px;
+width : 105px;
+}
+.g {
+color : #666;
+}
+.ss-form-desc {
+font : inherit;
+width : 99%;
+margin : 0;
+}
+.ss-powered-by {
+display : block;
+clear : left;
+color : #666;
+margin : 1em 0.2em 0.2em;
+}
+.ss-powered-by a:link, .ss-powered-by a:visited {
+color : #666;
+}
+.ss-required-asterisk {
+color : #c43b1d;
+}
+.ss-no-ignore-whitespace {
+white-space : pre-wrap;
+overflow-wrap : break-word;
+}
+.ss-confirmation-header {
+font-size : 140%;
+padding-bottom : 1em;
+}
+.ss-abuse-header {
+background : #fff68f;
+line-height : 1.3em;
+margin : 0 auto 1em;
+padding : 0.5em;
+width : 97%;
+}
+.form-error-arg {
+font-weight : bold;
+}
+textarea {
+font : normal normal 13px arial, sans-serif;
+}
+.aria-only-help {
+font-size : 0;
+left : -9999px;
+position : absolute;
+}
+.ss-grid {
+overflow-x : auto;
+}
+.ss-gridnumbers {
+text-align : center;
+border-bottom : 1px solid #d3d8d3;
+}
+.ss-gridnumber {
+display : block;
+padding : 0.5em 0 0.5em;
+}
+.ss-gridrow {
+text-align : center;
+color : #666;
+border-bottom : 1px solid #d3d8d3;
+padding : 0.5em 0.25em;
+}
+.ss-grid-row-even {
+background-color : #fff;
+}
+.ss-grid-row-odd {
+background-color : #f2f2f2;
+}
+.ss-gridrow-leftlabel {
+min-width : 100px;
+max-width : 200px;
+padding-left : 15px;
+text-align : left;
+}
+.ss-grideditor-columns input {
+line-height : 150%;
+}
+.ss-grideditor-editor .ss-magiclist-ul span.ss-header {
+font-weight : bold;
+padding-right : 1em;
+}
+.ss-grid-separator {
+border : #e5e5e5 solid 1px;
+}
+.ss-scalenumbers {
+text-align : center;
+}
+.ss-scalenumber {
+display : block;
+padding : 0.5em 0 0.5em;
+}
+.ss-scalerow {
+text-align : center;
+color : #666;
+border : #d3d8d3 solid 1px;
+border-left : 0;
+border-right : 0;
+padding : 0.5em 0.25em;
+}
+td.ss-leftlabel {
+text-align : right;
+padding-left : 0;
+}
+td.ss-rightlabel {
+text-align : left;
+padding-right : 0;
+}
+.ss-form-entry {
+margin-bottom : 1.5em;
+}
+.ss-form-entry input {
+vertical-align : middle;
+margin-left : 0;
+margin-top : 0;
+}
+.ss-form-entry select {
+max-width : 100%;
+}
+.ss-q-title {
+display : block;
+font-weight : bold;
+}
+.ss-q-help {
+display : block;
+color : #666;
+margin : 0.1em 0 0.25em 0;
+}
+.ss-textarea {
+max-width : 99%;
+}
+.ss-q-long {
+resize : vertical;
+width : 70%;
+}
+.ss-choices {
+list-style : none;
+margin : 0.5em 0 0 0;
+padding : 0;
+}
+.ss-choice-item {
+margin : 0;
+line-height : 1.3em;
+padding-bottom : 0.5em;
+}
+.ss-required-asterisk {
+color : #c43b1d;
+}
+.ss-section-title {
+background-color : #eee;
+padding : 0.4em;
+margin : 2em -0.4em 0;
+}
+.ss-section-description {
+margin-top : 0.5em;
+}
+.ss-page-title {
+margin : 0;
+padding : 0;
+}
+.ss-formwidget-container:focus {
+outline : none;
+}
+.ss-item {
+margin : 12px 0;
+}
+.ss-edit-link, .ss-edit-link:active, .ss-edit-link:visited, .ss-edit-link:hover, .ss-edit-link:link {
+background : url(//www.gstatic.com/docs/spreadsheets/forms/edit_dark.png) 7px 8px no-repeat #1f1f1d;
+border : #fff solid 1px;
+color : #fff;
+float : right;
+font : normal normal 13px arial, sans-serif;
+font-weight : bold;
+padding : 7px 7px 7px 27px;
+text-decoration : none;
+}
+.disclaimer .ss-terms a:link {
+color : #15c;
+text-decoration : none;
+}
+.disclaimer .ss-terms a:hover {
+text-decoration : underline;
+}
+.disclaimer .ss-terms a:active {
+color : #d14836;
+}
+.disclaimer .ss-terms a:visited {
+color : #61c;
+}
+.disclaimer {
+color : #777;
+font : normal normal 11px arial, sans-serif;
+margin-top : 11px;
+}
+.disclaimer-separator {
+border-top : 1px solid #ebebeb;
+}
+.disclaimer .ss-logo-link {
+color : #777;
+text-decoration : none;
+}
+.powered-by-logo {
+display : inline-block;
+vertical-align : bottom;
+}
+.powered-by-text {
+line-height : 16px;
+}
+.ss-terms {
+display : inline-block;
+line-height : 20px;
+width : 80%;
+text-align : center;
+}
+.ss-submit-message {
+font : normal normal 13px arial, sans-serif;
+margin-bottom : 20px;
+}
+.errorbox-bad {
+border : #c43b1d solid 2px;
+background-color : #ffe6cc;
+padding : 2px;
+}
+.errorheader {
+color : #c43b1d;
+}
+.ss-confirmation-banner, .ss-editing-response {
+background-color : #ffff87;
+padding : 1em;
+}
+.ss-form-container {
+padding : 10px;
+}
