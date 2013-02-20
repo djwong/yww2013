@@ -1,16 +1,16 @@
 	<h1>Schedule of Events</h1>
 
 	<p>Youth Weekend West presents a variegated and entertaining schedule
-of events for the weekend, including Scottish Country dancing classes at three
-levels, elective dance classes for the adventurous, a Ceilidh on Friday night,
-and a Ball on Saturday, to which Scottish Country Dancers of all ages are
-invited.</p>
+of events for the weekend, including Scottish Country dancing classes, elective
+dance classes for the adventurous, a Ceilidh on Friday night, a "Dancing Among
+the Stars" Ball on Saturday to which Scottish Country Dancers of all ages are
+invited, and a combined class on Sunday morning.</p>
 
 	<h2>Friday, May 3rd, 2013</h2>
 	<table>
 		<tr>
-			<td>7:00 pm - 10:00 pm</td>
-			<td>Welcome Ceildh at the Academy Building</td>
+			<td style="padding-right: 2em;">7:00 pm - 10:00 pm</td>
+			<td>Welcome Ceildh at the Academy Building (C)</td>
 		</tr>
 	</table>
 
@@ -19,10 +19,10 @@ invited.</p>
 	<table>
 		<tr>
 			<td>9:30am - 10:30am</td>
-			<td><a href="classes.html">Classes</a> (part I, Academy building or St. Luke's)</td>
+			<td><a href="classes.html">Classes</a> (part I, Academy Building (C) or St. Luke's (A))</td>
 		</tr>
 		<tr>
-			<td>10:45am - 11:45am</td>
+			<td style="padding-right: 2em;">10:45am - 11:45am</td>
 			<td><a href="classes.html">Classes</a> (part II, Academy building or St. Luke's)</td>
 		</tr>
 		<tr>
@@ -31,7 +31,7 @@ invited.</p>
 		</tr>
 		<tr>
 			<td>1:15pm - 2:15pm</td>
-			<td>Elective (Zombie or Norman dance, St. Luke's or the Columbia Dance Center)
+			<td>Elective (Zombie or Norman dance, St. Luke's or the Columbia Dance Center (B))
 		</tr>
 		<tr>
 			<td>2:30pm - 3:30pm</td>
@@ -51,7 +51,7 @@ invited.</p>
 	<h2>Sunday, May 5th, 2013</h2>
 	<table>
 		<tr>
-			<td>9:30am - 11:30am</td>
+			<td style="padding-right: 2em;">9:30am - 11:30am</td>
 			<td>Combined class, Columbia Dance Center</td>
 		</tr>
 	</table>
