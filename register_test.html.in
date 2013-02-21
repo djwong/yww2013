@@ -99,8 +99,8 @@ function change_package(num) {
 </div></div></div> <div class="errorbox-good">
 <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Package Levels</h2>
 <div class="ss-section-description ss-no-ignore-whitespace">We offer two packages: a full package, which includes all dancing activities and a hotel reservation; and a commuter package, which does not include the hotel.  Full packages are $100 USD, and commuter packages are $75 USD.  A limited amount of home hosting is available at the commuter price.  Please contact <a href="mailto:yww2013@yahoo.com">yww2013@yahoo.com</a> directly for details.
-
-After April 1, those prices go up to $110 USD and $90 USD, respectively.  We <i>cannot</i> guarantee a hotel reservation after April 1st.
+<!-- djwong added html formatting here -->
+<b>After April 1</b>, those prices go up to $110 USD and $90 USD, respectively.  We <i>cannot</i> guarantee a hotel reservation after April 1st.
 
 If writing a check or a money order, please make it out to "RSCDS, Southwest Washington State Branch" and send it to:
 YWW 2013
