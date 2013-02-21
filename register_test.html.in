@@ -132,7 +132,7 @@ You may also pay via PayPal.</div>
 <label class="ss-choice-label" for="group_2066431272_2">PayPal.</label></label>
 
 <!-- djwong added paypal stuff here -->
-<span style="margin-left: 2em;"><a href="javascript:add_package();"><img style="vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a> <a href="javascript:view_cart();"><img style="vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" alt="View Cart"></img></a></span>
+<span style="margin-left: 2em;"><a href="javascript:add_package();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a> <a href="javascript:view_cart();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" alt="View Cart"></img></a></span>
 <!-- end djwong added paypal stuff here -->
 
 </li></ul></div></div></div> <div class="errorbox-good">
