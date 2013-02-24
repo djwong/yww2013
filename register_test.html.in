@@ -15,20 +15,12 @@ function add_donation() {
 		return;
 	}
 
-	var radio = document.getElementById("group_2066431272_2");
-	if (radio != null)
-		radio.checked = true;
-
 	var add_form = find_form_by_name("add_donation");
 	if (add_form != null)
 		add_form.submit();
 }
 
 function add_package() {
-	var radio = document.getElementById("group_2066431272_2");
-	if (radio != null)
-		radio.checked = true;
-
 	var add_form = find_form_by_name("add_cart");
 	if (add_form != null)
 		add_form.submit();
@@ -52,6 +44,54 @@ function change_package(num) {
 	if (sel != null)
 		sel.selectedIndex = num;
 }
+
+function change_payment_option(is_paypal) {
+	var box = document.getElementById("paypal_trans_id_box");
+	if (box != null)
+		box.style.display = (is_paypal ? "inherit" : "none");
+	box = document.getElementById("package_paypal");
+	if (box != null)
+		box.style.display = (is_paypal ? "inline" : "none");
+	box = document.getElementById("superstar_paypal");
+	if (box != null)
+		box.style.display = (is_paypal ? "inherit" : "none");
+	box = document.getElementById("superstar_check");
+	if (box != null)
+		box.style.display = (is_paypal ? "none" : "inherit");
+}
+
+function onload() {
+	var chk = document.getElementById("group_2066431272_1");
+	if (chk != null && chk.checked)
+		change_payment_option(0);
+	chk = document.getElementById("group_2066431272_2");
+	if (chk != null && chk.checked)
+		change_payment_option(1);
+}
+
+function addEventHandler(node, eventName, lambda)
+{
+	var cookie = {node: node, event: eventName, func: lambda};
+	if (node.addEventListener)
+		node.addEventListener(eventName, lambda, false);
+	else if (node.attachEvent)
+		node.attachEvent("on" + eventName, lambda);
+	return cookie;
+}
+
+function delEventHandler(cookie)
+{
+	if (cookie.node.removeEventListener)
+		cookie.node.removeEventListener(cookie.eventName, cookie.func, false);
+	else if (cookie.node.detachEvent)
+		cookie.node.detachEvent("on" + cookie.eventName, cookie.func);
+}
+
+function addWindowEventHandler(eventName, lambda)
+{
+	return addEventHandler(window, eventName, lambda);
+}
+addWindowEventHandler("load", function() {onload();});
 </script>
 
 	<h1>Register!</h1>
@@ -211,14 +251,15 @@ You may also pay via PayPal.</div>
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 <span class="ss-required-asterisk">*</span></div>
 <div class="ss-q-help" dir="ltr">If using PayPal, select a package above, click the "Add to Cart" button, and complete your PayPal transaction before returning to this form.</div></label>
-<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.2066431272" value="Check or money order." id="group_2066431272_1" class="ss-q-radio" aria-label="Check or money order." type="radio">
-<label class="ss-choice-label" for="group_2066431272_1">Check or money order.</label></label></li> <li class="ss-choice-item"><label><input name="entry.2066431272" value="PayPal." id="group_2066431272_2" class="ss-q-radio" aria-label="PayPal." type="radio">
+<!-- djwong added hide/show logic to the radio buttons and a default, and depends on the id of the radio buttons -->
+<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.2066431272" value="Check or money order." id="group_2066431272_1" class="ss-q-radio" aria-label="Check or money order." type="radio" onchange="change_payment_option(0);" checked="true">
+<label class="ss-choice-label" for="group_2066431272_1">Check or money order.</label></label></li> <li class="ss-choice-item"><label><input name="entry.2066431272" value="PayPal." id="group_2066431272_2" class="ss-q-radio" aria-label="PayPal." type="radio" onchange="change_payment_option(1);">
 <!-- djwong the id of the radio button is used up above -->
-<label class="ss-choice-label" for="group_2066431272_2">PayPal.</label></label>
+<label class="ss-choice-label" for="group_2066431272_2">PayPal.</label></label></li></ul>
 <!-- djwong added paypal stuff here -->
-<span style="margin-left: 2em;"><a href="javascript:add_package();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a> <a href="javascript:view_cart();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" alt="View Cart"></img></a></span>
+<div id="package_paypal" style="display: none;">Please use this button to add your registration to your PayPal cart:<br /><a href="javascript:add_package();"><img style="border: 0px;" src="http://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a> <a href="javascript:view_cart();"><img style="border: 0px;" src="http://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" alt="View Cart"></img></a></div>
 <!-- end djwong added paypal stuff here -->
-</li></ul></div></div></div> <div class="errorbox-good">
+</div></div></div> <div class="errorbox-good">
 <div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1306828838"><div class="ss-q-title">Would you like to be a Super Star?
 </div>
 <div class="ss-q-help" dir="ltr">We appreciate your registration for this event, and if you'd like to contribute further to the promotion of Scottish Country Dance events for young people, please indicate that here.  All prices are in USD.</div></label>
@@ -230,10 +271,11 @@ You may also pay via PayPal.</div>
 <label class="ss-choice-label" for="group_2063432586_4">$50</label></label></li> <li class="ss-choice-item"><label><input name="entry.2063432586" value="$100" id="group_2063432586_5" class="ss-q-radio" aria-label="$100" type="radio" onchange="change_donation(4);">
 <label class="ss-choice-label" for="group_2063432586_5">$100</label></label></li></ul>
 <!-- djwong added paypal stuff here -->
-<span>If paying with PayPal, use this button to add your donation to your cart:<br /><a href="javascript:add_donation();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a></span><br /><br />
-<span>If paying by check, simply add the amount of your donation to the check amount.</span>
+<div id="superstar_paypal" style="display: none;">Please use this button to add your donation to your PayPal cart:<br /><a href="javascript:add_donation();"><img style="border: 0px;" src="http://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a></div>
+<div id="superstar_check">Please add the amount of your donation to the check amount.</div>
 <!-- end djwong added paypal stuff here -->
-</div></div></div> <div class="errorbox-good">
+<!-- djwong added id to this errorbox -->
+</div></div></div> <div class="errorbox-good" id="paypal_trans_id_box" style="display: none;">
 <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_560824854"><div class="ss-q-title">PayPal information
 </div>
 <div class="ss-q-help" dir="ltr">To expedite your confirmation if you're paying with PayPal, please enter one of: (a) the transaction ID you were given at checkout, (b) your PayPal user id, or (c) the email address you supplied to PayPal.</div></label>
@@ -273,8 +315,9 @@ You may also pay via PayPal.</div>
 </select> </td></tr>
 </table>
 <input type="hidden" name="currency_code" value="USD">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<!-- djwong changed https to http mode -->
+<input type="image" src="http://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<!-- djwong removed the web bug -->
 </form>
 
 <!-- djwong added an id tag to the form -->
@@ -282,8 +325,9 @@ You may also pay via PayPal.</div>
 	<input type="hidden" name="cmd" value="_s-xclick">
 	<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
 	">
-	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	<!-- djwong disabled https mode -->
+	<input type="image" src="http://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<!-- djwong removed the web bug -->
 </form>
 
 <!-- djwong added an id tag to the form -->
@@ -301,18 +345,9 @@ You may also pay via PayPal.</div>
 </select> </td></tr>
 </table>
 <input type="hidden" name="currency_code" value="USD">
-<!-- djwong added an id and disabled the button -->
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" id="submit_donation">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<!-- djwong added an id, disabled the button and shut off https -->
+<input type="image" src="http://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" id="submit_donation">
+<!-- djwong removed the web bug -->
 </form>
-
-<!-- not used by anything
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="NEY9DKL3A8C32">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
--->
 
 </div>
