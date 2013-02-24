@@ -59,9 +59,10 @@ function change_package(num) {
 <!-- WARNING!  djwong has modified the embedded Google form to call out to paypal!  See the area around line 119. -->
 <div class="ss-top-of-page">
 
-<div class="ss-form-heading"><h1 class="ss-form-title" dir="ltr">Youth Weekend West 2013 Registration</h1>
+<!-- djwong removed the h1 blob -->
+<div class="ss-form-heading">
 <p></p>
-<div class="ss-form-desc ss-no-ignore-whitespace">Youth Weekend West was started in 2003 as a fun and intense weekend of Scottish dance, where dancers can be exposed to new dances, refine their technique, and interact with dancers from other branches.<p>Registration includes a welcome ceilidh, two days of Scottish Country Dance classes and electives, lunch on Saturday, a ball-walk through, a ticket for the "Dance Among the Stars" dinner and ball, and shared hotel accommodations at the Comfort Inn on 401 E 13th Street, Vancouver, WA.</p><p>Group accommodation is offered at the Vancouver, WA Comfort Inn and will be two double beds shared by four YWW dancers of the same gender. A complimentary hot breakfast buffet is offered each morning.</p><p>Please submit one registration form for each individual attending. Confirmation of registration will be sent upon receipt of payment.</p><p></p><p></p></div>
+<div class="ss-form-desc ss-no-ignore-whitespace">Youth Weekend West was started in 2003 as a fun and intense weekend of Scottish dance, where dancers can be exposed to new dances, refine their technique, and interact with dancers from other branches.  The event is open to dancers aged 12 to 30ish.  If you are enthusiastic about dancing, please register, even if you fall at the end of the 30ish range.  We'd love to have you!<p>Registration includes a welcome ceilidh, two days of Scottish Country Dance classes and electives, lunch on Saturday, a ball-walk through, a ticket for the "Dance Among the Stars" dinner and ball, and shared hotel accommodations at the Comfort Inn on 401 E 13th Street, Vancouver, WA.</p><p>Group accommodation is offered at the Vancouver, WA Comfort Inn and will be two double beds shared by four YWW dancers of the same gender. A complimentary hot breakfast buffet is offered each morning.</p><p>Please submit one registration form for each individual attending. Confirmation of registration will be sent upon receipt of payment.</p><p></p><p></p></div>
 
 <hr class="ss-email-break" style="display:none;">
 <div class="ss-required-asterisk">* Required</div></div></div>
