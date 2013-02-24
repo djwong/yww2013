@@ -125,63 +125,8 @@ function change_package(num) {
 <div class="ss-q-help" dir="ltr"></div></label>
 <textarea name="entry.13" rows="8" cols="0" class="ss-q-long" id="entry_13" dir="auto"></textarea>
 </div></div></div> <div class="errorbox-good">
-<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Package Levels</h2>
-<div class="ss-section-description ss-no-ignore-whitespace">We offer two packages: a full package, which includes all dancing activities and a hotel reservation; and a commuter package, which does not include the hotel.  Full packages are $116 USD, and commuter packages are $71 USD.  A limited amount of home hosting is available at the commuter price.  Please contact <a href="mailto:yww2013@yahoo.com">yww2013@yahoo.com</a> directly for details.
-<!-- djwong added html formatting here -->
-<b>After April 1st</b>, those prices go up to $131 USD and $86 USD, respectively.  We <i>cannot</i> guarantee a hotel reservation after April 1st.
-
-If writing a check or a money order, please make it out to "RSCDS, Southwest Washington State Branch" and send it to:
-YWW 2013
-c/o Mintz
-P.O. Box 261
-Battle Ground, WA 98604-0261
-USA.
-
-You may also pay via PayPal.</div>
-</div></div></div> <div class="errorbox-good">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1009"><div class="ss-q-title">Which package would you like?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk">*</span></div>
-<div class="ss-q-help" dir="ltr">Note: Only the first two options get you into YWW-only activities.  All prices are in USD.</div></label>
-<!-- djwong added some onchange handlers to the radio buttons, prices, and set a default button -->
-<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.10" value="Class + Dinner + All Dancing Events + Lodging" id="group_10_1" class="ss-q-radio" aria-label="Class + Dinner + All Dancing Events + Lodging" type="radio" onchange="change_package(0);" checked="true">
-<label class="ss-choice-label" for="group_10_1">Class + Dinner + All Dancing Events + Lodging ($116)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Class + Dinner + All Dancing Events" id="group_10_2" class="ss-q-radio" aria-label="Class + Dinner + All Dancing Events" type="radio" onchange="change_package(1);">
-<label class="ss-choice-label" for="group_10_2">Class + Dinner + All Dancing Events ($71)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Dinner + Ball" id="group_10_3" class="ss-q-radio" aria-label="Dinner + Ball" type="radio" onchange="change_package(2);">
-<label class="ss-choice-label" for="group_10_3">Dinner + Ball ($35)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Ball" id="group_10_4" class="ss-q-radio" aria-label="Ball" type="radio" onchange="change_package(3);">
-<label class="ss-choice-label" for="group_10_4">Ball ($30)</label></label></li></ul></div></div></div> <div class="errorbox-good">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_62760471"><div class="ss-q-title">How will you pay us?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk">*</span></div>
-<div class="ss-q-help" dir="ltr">If using PayPal, select a package above, click the "Add to Cart" button, and complete your PayPal transaction before returning to this form.</div></label>
-<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.2066431272" value="Check or money order." id="group_2066431272_1" class="ss-q-radio" aria-label="Check or money order." type="radio">
-<!-- djwong the id of the radio button is used up above -->
-<label class="ss-choice-label" for="group_2066431272_1">Check or money order.</label></label></li> <li class="ss-choice-item"><label><input name="entry.2066431272" value="PayPal." id="group_2066431272_2" class="ss-q-radio" aria-label="PayPal." type="radio">
-<label class="ss-choice-label" for="group_2066431272_2">PayPal.</label></label>
-<!-- djwong added paypal stuff here -->
-<span style="margin-left: 2em;"><a href="javascript:add_package();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a> <a href="javascript:view_cart();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" alt="View Cart"></img></a></span>
-<!-- end djwong added paypal stuff here -->
-</li></ul></div></div></div> <div class="errorbox-good">
-<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1306828838"><div class="ss-q-title">Would you like to be a Super Star?
-</div>
-<div class="ss-q-help" dir="ltr">We appreciate your registration for this event, and if you'd like to contribute further to the promotion of Scottish Country Dance events for young people, please indicate that here.  All prices are in USD.</div></label>
-<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.2063432586" value="$5" id="group_2063432586_1" class="ss-q-radio" aria-label="$5" type="radio" onchange="change_donation(0);">
-<label class="ss-choice-label" for="group_2063432586_1">$5</label></label></li> <li class="ss-choice-item"><label><input name="entry.2063432586" value="$10" id="group_2063432586_2" class="ss-q-radio" aria-label="$10" type="radio" onchange="change_donation(1);">
-<label class="ss-choice-label" for="group_2063432586_2">$10</label></label></li> <li class="ss-choice-item"><label><input name="entry.2063432586" value="$20" id="group_2063432586_3" class="ss-q-radio" aria-label="$20" type="radio" onchange="change_donation(2);">
-<label class="ss-choice-label" for="group_2063432586_3">$20</label></label></li> <li class="ss-choice-item"><label><input name="entry.2063432586" value="$50" id="group_2063432586_4" class="ss-q-radio" aria-label="$50" type="radio" onchange="change_donation(3);">
-<label class="ss-choice-label" for="group_2063432586_4">$50</label></label></li> <li class="ss-choice-item"><label><input name="entry.2063432586" value="$100" id="group_2063432586_5" class="ss-q-radio" aria-label="$100" type="radio" onchange="change_donation(4);">
-<label class="ss-choice-label" for="group_2063432586_5">$100</label></label></li></ul>
-<!-- djwong added paypal stuff here -->
-<span>If paying with PayPal, use these buttons to add your donation to your cart:<br /><a href="javascript:add_donation();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a> <a href="javascript:view_cart();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" alt="View Cart"></img></a></span><br /><br />
-<span>If paying by check, please add the amount of your donation to the check amount.</span>
-<!-- end djwong added paypal stuff here -->
-</div></div></div> <div class="errorbox-good">
-<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_560824854"><div class="ss-q-title">PayPal information
-</div>
-<div class="ss-q-help" dir="ltr">To expedite your confirmation if you're paying with PayPal, please enter one of: (a) the transaction ID they gave you, (b) your PayPal user id, or (c) the email address you supplied to PayPal.</div></label>
-<input name="entry.560824854" value="" class="ss-q-short" id="entry_560824854" dir="auto" type="text">
-</div></div></div> <div class="errorbox-good">
 <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Scottish Country Dancing Experience</h2>
-<div class="ss-section-description ss-no-ignore-whitespace"></div>
+<div class="ss-section-description ss-no-ignore-whitespace">We would like to have a general idea of the skill level of our audience so that we can adapt the content of the workshop to the dancers.</div>
 </div></div></div> <div class="errorbox-good">
 <div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1011"><div class="ss-q-title">How many years have you been dancing?
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
@@ -233,17 +178,73 @@ You may also pay via PayPal.</div>
 <div class="ss-q-help" dir="ltr">The Friday night ceilidh is a chance for you and the other workshop participants to show off your talents.</div></label>
 <textarea name="entry.399341518" rows="8" cols="0" class="ss-q-long" id="entry_399341518" dir="auto"></textarea>
 </div></div></div> <div class="errorbox-good">
-<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Other</h2>
-<div class="ss-section-description ss-no-ignore-whitespace"></div>
-</div></div></div> <div class="errorbox-good">
 <div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_14"><div class="ss-q-title">If you'd like to request specific roommate(s), please do so here:
 </div>
 <div class="ss-q-help" dir="ltr">Note: If you do not specify a group of four, we will assign 4 people of the same gender to a room.</div></label>
 <textarea name="entry.14" rows="8" cols="0" class="ss-q-long" id="entry_14" dir="auto"></textarea>
 </div></div></div> <div class="errorbox-good">
-<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_919871729"><div class="ss-q-title">Anything else we ought to know about?
+<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Packages</h2>
+<div class="ss-section-description ss-no-ignore-whitespace">We offer two packages: a full package, which includes all dancing activities and a hotel reservation; and a commuter package, which does not include the hotel.  Full packages are $116 USD, and commuter packages are $71 USD.  A limited amount of home hosting is available at the commuter price.  Please contact <a href="mailto:yww2013@yahoo.com">yww2013@yahoo.com</a> directly for details.
+<!-- djwong added html formatting here -->
+<b>After April 1st</b>, those prices go up to $131 USD and $86 USD, respectively.  We <i>cannot</i> guarantee a hotel reservation after April 1st.
+
+If writing a check or a money order, please make it out to "RSCDS, Southwest Washington State Branch" and send it to:
+YWW 2013
+c/o Mintz
+P.O. Box 261
+Battle Ground, WA 98604-0261
+USA.
+
+You may also pay via PayPal.</div>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1009"><div class="ss-q-title">Which package would you like?
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr">Note: Only the first two options get you into YWW-only activities.  All prices are in USD.</div></label>
+<!-- djwong added some onchange handlers to the radio buttons, prices, and set a default button -->
+<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.10" value="Class + Dinner + All Dancing Events + Lodging" id="group_10_1" class="ss-q-radio" aria-label="Class + Dinner + All Dancing Events + Lodging" type="radio" checked="true" onchange="change_package(0);">
+<label class="ss-choice-label" for="group_10_1">Class + Dinner + All Dancing Events + Lodging ($116)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Class + Dinner + All Dancing Events" id="group_10_2" class="ss-q-radio" aria-label="Class + Dinner + All Dancing Events" type="radio" onchange="change_package(1);">
+<label class="ss-choice-label" for="group_10_2">Class + Dinner + All Dancing Events ($71)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Dinner + Ball" id="group_10_3" class="ss-q-radio" aria-label="Dinner + Ball" type="radio" onchange="change_package(2);">
+<label class="ss-choice-label" for="group_10_3">Dinner + Ball ($35)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Ball" id="group_10_4" class="ss-q-radio" aria-label="Ball" type="radio" onchange="change_package(3);">
+<label class="ss-choice-label" for="group_10_4">Ball ($30)</label></label></li></ul></div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_62760471"><div class="ss-q-title">How will you pay us?
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk">*</span></div>
+<div class="ss-q-help" dir="ltr">If using PayPal, select a package above, click the "Add to Cart" button, and complete your PayPal transaction before returning to this form.</div></label>
+<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.2066431272" value="Check or money order." id="group_2066431272_1" class="ss-q-radio" aria-label="Check or money order." type="radio">
+<label class="ss-choice-label" for="group_2066431272_1">Check or money order.</label></label></li> <li class="ss-choice-item"><label><input name="entry.2066431272" value="PayPal." id="group_2066431272_2" class="ss-q-radio" aria-label="PayPal." type="radio">
+<!-- djwong the id of the radio button is used up above -->
+<label class="ss-choice-label" for="group_2066431272_2">PayPal.</label></label>
+<!-- djwong added paypal stuff here -->
+<span style="margin-left: 2em;"><a href="javascript:add_package();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a> <a href="javascript:view_cart();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" alt="View Cart"></img></a></span>
+<!-- end djwong added paypal stuff here -->
+</li></ul></div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1306828838"><div class="ss-q-title">Would you like to be a Super Star?
 </div>
-<div class="ss-q-help" dir="ltr"></div></label>
+<div class="ss-q-help" dir="ltr">We appreciate your registration for this event, and if you'd like to contribute further to the promotion of Scottish Country Dance events for young people, please indicate that here.  All prices are in USD.</div></label>
+<!-- djwong added javascript for the forms here -->
+<ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.2063432586" value="$5" id="group_2063432586_1" class="ss-q-radio" aria-label="$5" type="radio" onchange="change_donation(0);">
+<label class="ss-choice-label" for="group_2063432586_1">$5</label></label></li> <li class="ss-choice-item"><label><input name="entry.2063432586" value="$10" id="group_2063432586_2" class="ss-q-radio" aria-label="$10" type="radio" onchange="change_donation(1);">
+<label class="ss-choice-label" for="group_2063432586_2">$10</label></label></li> <li class="ss-choice-item"><label><input name="entry.2063432586" value="$20" id="group_2063432586_3" class="ss-q-radio" aria-label="$20" type="radio" onchange="change_donation(2);">
+<label class="ss-choice-label" for="group_2063432586_3">$20</label></label></li> <li class="ss-choice-item"><label><input name="entry.2063432586" value="$50" id="group_2063432586_4" class="ss-q-radio" aria-label="$50" type="radio" onchange="change_donation(3);">
+<label class="ss-choice-label" for="group_2063432586_4">$50</label></label></li> <li class="ss-choice-item"><label><input name="entry.2063432586" value="$100" id="group_2063432586_5" class="ss-q-radio" aria-label="$100" type="radio" onchange="change_donation(4);">
+<label class="ss-choice-label" for="group_2063432586_5">$100</label></label></li></ul>
+<!-- djwong added paypal stuff here -->
+<span>If paying with PayPal, use this button to add your donation to your cart:<br /><a href="javascript:add_donation();"><img style="border: 0px; vertical-align: text-bottom;" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a></span><br /><br />
+<span>If paying by check, simply add the amount of your donation to the check amount.</span>
+<!-- end djwong added paypal stuff here -->
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_560824854"><div class="ss-q-title">PayPal information
+</div>
+<div class="ss-q-help" dir="ltr">To expedite your confirmation if you're paying with PayPal, please enter one of: (a) the transaction ID you were given at checkout, (b) your PayPal user id, or (c) the email address you supplied to PayPal.</div></label>
+<input name="entry.560824854" value="" class="ss-q-short" id="entry_560824854" dir="auto" type="text">
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Other</h2>
+<div class="ss-section-description ss-no-ignore-whitespace"></div>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_919871729"><div class="ss-q-title">Is there anything else that you'd like us to know?
+</div>
+<div class="ss-q-help" dir="ltr">You're just about finished registering.  If you have any concerns, requests, or suggestions that would help us to help you enjoy Youth Weekend West, we'd like to read them!</div></label>
 <textarea name="entry.919871729" rows="8" cols="0" class="ss-q-long" id="entry_919871729" dir="auto"></textarea>
 </div></div></div>
 <input name="draftResponse" value="[]
@@ -252,7 +253,9 @@ You may also pay via PayPal.</div>
 
 
 <div class="ss-item ss-navigate"><div class="ss-form-entry">
-<input name="submit" value="Submit" id="ss-submit" type="submit"></div></div></form></div>
+<!-- djwong changed the submit button -->
+<input name="submit" value="Register me!" id="ss-submit" type="submit"></div></div></form></div>
+<!-- djwong deleted everything in ss-footer -->
 
 <!-- djwong pasted paypal button code here and hid the forms -->
 <div style="display: none;">
