@@ -15,12 +15,20 @@ function add_donation() {
 		return;
 	}
 
+	var radio = document.getElementById("group_2066431272_2");
+	if (radio != null)
+		radio.checked = true;
+
 	var add_form = find_form_by_name("add_donation");
 	if (add_form != null)
 		add_form.submit();
 }
 
 function add_package() {
+	var radio = document.getElementById("group_2066431272_2");
+	if (radio != null)
+		radio.checked = true;
+
 	var add_form = find_form_by_name("add_cart");
 	if (add_form != null)
 		add_form.submit();
@@ -145,6 +153,7 @@ You may also pay via PayPal.</div>
 <span class="ss-required-asterisk">*</span></div>
 <div class="ss-q-help" dir="ltr">If using PayPal, select a package above, click the "Add to Cart" button, and complete your PayPal transaction before returning to this form.</div></label>
 <ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.2066431272" value="Check or money order." id="group_2066431272_1" class="ss-q-radio" aria-label="Check or money order." type="radio">
+<!-- djwong the id of the radio button is used up above -->
 <label class="ss-choice-label" for="group_2066431272_1">Check or money order.</label></label></li> <li class="ss-choice-item"><label><input name="entry.2066431272" value="PayPal." id="group_2066431272_2" class="ss-q-radio" aria-label="PayPal." type="radio">
 <label class="ss-choice-label" for="group_2066431272_2">PayPal.</label></label>
 <!-- djwong added paypal stuff here -->
