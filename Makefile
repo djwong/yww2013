@@ -6,8 +6,8 @@ all: $(TARGETS)
 
 install: $(TARGETS) $(FILES)
 	$(INSTALL) -d $(DESTDIR)
-	$(INSTALL) -m 0644 $(TARGETS) $(DESTDIR)
-	$(INSTALL) -m 0644 $(FILES) $(DESTDIR)
+	$(INSTALL) -p -m 0644 $(TARGETS) $(DESTDIR)
+	$(INSTALL) -p -m 0644 $(FILES) $(DESTDIR)
 
 .PHONY: install upload
 
