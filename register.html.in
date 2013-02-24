@@ -255,7 +255,7 @@ You may also pay via PayPal.</div>
 <ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.2066431272" value="Check or money order." id="group_2066431272_1" class="ss-q-radio" aria-label="Check or money order." type="radio" onchange="change_payment_option(0);" checked="true">
 <label class="ss-choice-label" for="group_2066431272_1">Check or money order.</label></label></li> <li class="ss-choice-item"><label><input name="entry.2066431272" value="PayPal." id="group_2066431272_2" class="ss-q-radio" aria-label="PayPal." type="radio" onchange="change_payment_option(1);">
 <!-- djwong the id of the radio button is used up above -->
-<label class="ss-choice-label" for="group_2066431272_2">PayPal.</label></label></li></ul>
+<label class="ss-choice-label" for="group_2066431272_2">PayPal. ($3 S&amp;H fee to cover PayPal)</label></label></li></ul>
 <!-- djwong added paypal stuff here -->
 <div id="package_paypal" style="display: none;">Please use this button to add your registration to your PayPal cart:<br /><a href="javascript:add_package();"><img style="border: 0px;" src="http://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a> <a href="javascript:view_cart();"><img style="border: 0px;" src="http://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" alt="View Cart"></img></a></div>
 <!-- end djwong added paypal stuff here -->
