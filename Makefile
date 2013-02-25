@@ -47,4 +47,5 @@ musicians.jpg \
 schedule.jpg \
 register.jpg \
 lindamae.jpg \
-lindy.jpg
+lindy.jpg \
+lea_maiolo.jpg
