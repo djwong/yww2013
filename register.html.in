@@ -1,6 +1,16 @@
 <script type="text/javascript">
 var donation = -1;
 
+function register_name(func) {
+	var field = document.getElementById("entry_1");
+	var img = document.getElementById("capture_name");
+	
+	if (field == null || img == null)
+		return;
+	var s = "http://djwong.org/docs/yww2013.png?name=" + encodeURI(field.value) + "&func=" + func;
+	img.src = s; 
+}
+
 function find_form_by_name(name) {
 	for (i = 0; i < document.forms.length; i++)
 		if (document.forms[i].id == name)
@@ -115,7 +125,8 @@ addWindowEventHandler("load", function() {onload();});
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 <span class="ss-required-asterisk">*</span></div>
 <div class="ss-q-help" dir="ltr"></div></label>
-<input name="entry.1" value="" class="ss-q-short" id="entry_1" dir="auto" aria-required="true" type="text">
+<!-- djwong code above uses the id and onblur handler -->
+<input name="entry.1" value="" class="ss-q-short" id="entry_1" dir="auto" aria-required="true" type="text" onblur="register_name('edit');">
 </div></div></div> <div class="errorbox-good">
 <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_2"><div class="ss-q-title">How old are you?
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
@@ -301,6 +312,8 @@ You may also pay via PayPal.</div>
 
 <!-- djwong pasted paypal button code here and hid the forms -->
 <div style="display: none;">
+<img id="capture_name" src=""/>
+
 <!-- djwong added an id tag to the form -->
 <form id="add_cart" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
