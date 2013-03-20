@@ -1,4 +1,4 @@
-TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html
+TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html analytics.html
 DESTDIR=output/
 INSTALL=install
 
@@ -19,8 +19,16 @@ upload: install
 	cat $< >> $@
 	cat footer >> $@
 
+.PHONY: registration.csv
+
+registration.csv:
+	wget 'http://docs.google.com/spreadsheet/ccc?key=0AtDnBlSkyNjodGNXaEJWUzYxcVV3cG9FUmllS1RUaHc&output=csv&usp=sharing' -O $@
+
+analytics.html.in: registration.csv
+	./analytics.py $< --html > $@
+
 clean:
-	rm -rf $(TARGETS) $(DESTDIR)
+	rm -rf $(TARGETS) $(DESTDIR) registration.csv
 
 FILES=\
 LinBiolinum_Bd.otf \
