@@ -4,6 +4,7 @@ import re
 import csv
 import sys
 import urllib
+import datetime
 
 if len(sys.argv) < 2 or sys.argv[1] == '--help':
 	print "Usage: %s csvfile [--html]" % sys.argv[0]
@@ -147,7 +148,7 @@ def report_text():
 
 def report_html():
 	print '<h1>Analytics</h1>'
-	print '<p>A little bit of aggregated information about the %d people registered.</p>' % num_replies
+	print '<p>A little bit of aggregated information about the %d people registered, as of %s.</p>' % (num_replies, datetime.datetime.now().strftime('%c'))
 	for q_key in q_order:
 		print '<h2>%s</h2>' % questions[q_key]
 		r_keys = responses[q_key].keys()
