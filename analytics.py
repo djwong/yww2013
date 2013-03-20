@@ -147,8 +147,8 @@ def report_text():
 		print ''
 
 def report_html():
-	print '<h1>Analytics</h1>'
-	print '<p>A little bit of aggregated information about the %d people registered, as of %s.</p>' % (num_replies, datetime.datetime.now().strftime('%c'))
+	print '<h1>Who\'s Coming?</h1>'
+	print '<p>A little bit of aggregated information about the %d people registered as of %s.</p>' % (num_replies, datetime.datetime.now().strftime('%c'))
 	for q_key in q_order:
 		print '<h2>%s</h2>' % questions[q_key]
 		r_keys = responses[q_key].keys()
