@@ -307,7 +307,7 @@ You may also pay via PayPal.</div>
 
 <div class="ss-item ss-navigate"><div class="ss-form-entry">
 <!-- djwong changed the submit button -->
-<input name="submit" value="Register me!" id="ss-submit" type="submit"> <a href="analytics.html">View an overview of who's going</a></div></div></form></div>
+<input name="submit" value="Register me!" id="ss-submit" type="submit"></div></div></form></div>
 <!-- djwong deleted everything in ss-footer -->
 
 <!-- djwong pasted paypal button code here and hid the forms -->
