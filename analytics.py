@@ -168,7 +168,7 @@ def report_html():
 				chl = chl + '|%s (%.0f%%)' % (response, 100.0 * responses[q_key][response] / num_replies)
 		chd = urllib.quote_plus(chd, '|,:')
 		chl = urllib.quote_plus(chl, '|,:')
-		url = 'http://chart.googleapis.com/chart?cht=p&amp;chs=640x200&amp;chco=5f7ca8&amp;chdls=000000,18&amp;chds=a&amp;chd=%s&amp;chl=%s' % (chd, chl)
+		url = 'http://chart.googleapis.com/chart?cht=p&amp;chs=640x200&amp;chco=a85f7c&amp;chdls=000000,18&amp;chds=a&amp;chd=%s&amp;chl=%s' % (chd, chl)
 		print '<img src="%s" alt="%s"></img>' % (url, questions[q_key])
 		print ''
 

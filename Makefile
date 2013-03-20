@@ -57,4 +57,6 @@ register.jpg \
 lindamae.jpg \
 lindy.jpg \
 lea_maiolo.jpg \
-cribs.pdf
+cribs.pdf \
+travel.jpg \
+you.jpg
