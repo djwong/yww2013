@@ -56,4 +56,5 @@ schedule.jpg \
 register.jpg \
 lindamae.jpg \
 lindy.jpg \
-lea_maiolo.jpg
+lea_maiolo.jpg \
+cribs.pdf
