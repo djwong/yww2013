@@ -64,7 +64,9 @@ with open(sys.argv[1], 'rb') as csvfile:
 		# Filter some of the data
 		superstar = row[21]
 		if superstar == '':
-			superstar = 'No, thank you.'
+			superstar = 'No.'
+		else:
+			superstar = 'Yes.'
 		address = row[5]
 		addr = address.upper()
 		for rx in regions:
@@ -99,6 +101,16 @@ with open(sys.argv[1], 'rb') as csvfile:
 			timestamp = 'April'
 		elif timestamp == '5':
 			timestamp = 'May'
+		ceildh = row[17]
+		if ceildh == 'Yes, I will attend.':
+			ceildh = 'Yes.'
+		elif ceildh == 'No, I cannot make it and will check in Saturday morning.':
+			ceildh = 'No.'
+		walkthrough = row[16]
+		if walkthrough == 'Yes, I will attend the walk-through.':
+			walkthrough = 'Yes.'
+		elif walkthrough == 'No, I will not.':
+			walkthrough = 'No.'
 		record = {
 			'timestamp': timestamp,
 			'age': age,
@@ -110,8 +122,8 @@ with open(sys.argv[1], 'rb') as csvfile:
 			'years_dancing': row[13],
 			'freq_dancing': row[14],
 			'elective': row[15],
-			'walkthrough': row[16],
-			'ceildh': row[17],
+			'walkthrough': walkthrough,
+			'ceildh': ceildh,
 			'superstar': superstar,
 		}
 		records.append(record)
@@ -148,7 +160,7 @@ def report_text():
 
 def report_html():
 	print '<h1>Who\'s Coming?</h1>'
-	print '<p>A little bit of aggregated information about the %d people registered as of %s.</p>' % (num_replies, datetime.datetime.now().strftime('%c'))
+	print '<p>A little bit of aggregated information about the %d people registered as of %s.  There shouldn\'t be any personally-identifiable information here.  If there is, tell Darrick.</p>' % (num_replies, datetime.datetime.now().strftime('%c'))
 	for q_key in q_order:
 		print '<h2>%s</h2>' % questions[q_key]
 		r_keys = responses[q_key].keys()
@@ -168,7 +180,7 @@ def report_html():
 				chl = chl + '|%s (%.0f%%)' % (response, 100.0 * responses[q_key][response] / num_replies)
 		chd = urllib.quote_plus(chd, '|,:')
 		chl = urllib.quote_plus(chl, '|,:')
-		url = 'http://chart.googleapis.com/chart?cht=p&amp;chs=640x200&amp;chco=a85f7c&amp;chdls=000000,18&amp;chds=a&amp;chd=%s&amp;chl=%s' % (chd, chl)
+		url = 'http://chart.googleapis.com/chart?cht=p&amp;chs=500x200&amp;chco=a85f7c&amp;chdls=000000,18&amp;chds=a&amp;chd=%s&amp;chl=%s' % (chd, chl)
 		print '<img src="%s" alt="%s"></img>' % (url, questions[q_key])
 		print ''
 
