@@ -12,8 +12,9 @@ Center (location (B).</p>
 	<p>There will be two elective classes that you can choose from:</p>
 	<ul>
 	<li>Thriller Zombie Dance<br />
-<iframe width="640" height="480" src="http://www.youtube.com/embed/MZfqTbwwKHw?rel=0" frameborder="0" allowfullscreen></iframe></li>
-	<li>Norman Folk Dancing<br /><iframe width="640" height="360" src="http://www.youtube.com/embed/jO5NTRWlFe4?rel=0" frameborder="0" allowfullscreen></iframe></li>
+<!--[if !IE]><!--><object width="640" height="480" data="http://www.youtube.com/embed/MZfqTbwwKHw?rel=0"></object><!--<![endif]--><!--[if IE]><iframe width="640" height="480" src="http://www.youtube.com/embed/MZfqTbwwKHw?rel=0" frameborder="0" allowfullscreen></iframe><![endif]--></li>
+	<li>Norman Folk Dancing<br />
+<!--[if !IE]><!--><object width="640" height="360" data="http://www.youtube.com/embed/jO5NTRWlFe4?rel=0"></object><!--<![endif]--><!--[if IE]><iframe width="640" height="360" src="http://www.youtube.com/embed/jO5NTRWlFe4?rel=0" frameborder="0" allowfullscreen></iframe><![endif]--></li>
 	</ul>
 
 
