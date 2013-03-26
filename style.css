@@ -120,6 +120,13 @@ a#register {
 	border: 1px solid #ffff80;
 	background: #ffffd0;
 }
+#private {
+	margin: 0.2em;
+	margin-top: 1em;
+	padding: 0.2em;
+	border: 1px solid #ff8080;
+	background: #ffd0d0;
+}
 .map {
 	border: 1px solid #c0c0c0;
 	width: 100%;

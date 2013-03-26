@@ -9,6 +9,7 @@ TITLE="$(grep "^$1;" files | cut -d ';' -f 2)"
 OBSOLETE="$(grep "^$1;" files | cut -d ';' -f 3)"
 BACKGROUND="$(grep "^$1;" files | cut -d ';' -f 5)"
 DESCR="$(grep "^$1;" files | cut -d ';' -f 6)"
+PRIVATE="$(grep "^$1;" files | cut -d ';' -f 7)"
 if [ "$1" != "index.html" ]; then
 	TITLE="YWW 2013: ${TITLE}"
 fi
@@ -64,6 +65,12 @@ EOF
 if [ "${OBSOLETE}" != "no" ]; then
 	cat >> "$1" << EOF
 	<div id="obsolete"><strong>Notice:</strong> This page has not been updated with 2013 information.  Please check back later.</div>
+EOF
+fi
+
+if [ "${PRIVATE}" != "no" ]; then
+	cat >> "$1" << EOF
+	<div id="private"><strong>Notice:</strong> This page contains information not visible to the general public.  Please handle with care.</div>
 EOF
 fi
 
