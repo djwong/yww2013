@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+# Generate fancy pie charts from the registration data
+# Copyright (C) 2013 Darrick J. Wong.  All rights reserved.
+# Code is licensed GPLv2.
+
 import re
 import csv
 import sys
@@ -33,6 +37,31 @@ regions = {
 	re.compile('[ ,]WA[ \n]*'): 'Washington',
 	re.compile('[ ,]CA[ \n]*'): 'California',
 }
+area_codes = {
+	'971': 'Oregon',
+	'360': 'Washington',
+	'206': 'Washington',
+	'301': 'Maryland',
+	'408': 'California',
+	'778': 'British Columbia',
+	'250': 'British Columbia',
+	'541': 'Oregon',
+	'509': 'Washington',
+}
+
+def extract_area_code(in_str):
+	'''Extract digits from phone number.'''
+	out_str = ''
+	for ch in in_str:
+		if ch.isdigit():
+			out_str += ch
+
+	if len(out_str) < 2:
+		return None
+
+	if out_str[0] == '1':
+		return out_str[:4]
+	return out_str[:3]
 
 # Transform file data into a bunch of key-value groups
 first_row = True
@@ -62,11 +91,7 @@ with open(sys.argv[1], 'rb') as csvfile:
 			continue
 	
 		# Filter some of the data
-		superstar = row[21]
-		if superstar == '':
-			superstar = 'No.'
-		else:
-			superstar = 'Yes.'
+		# Where are we from?
 		address = row[5]
 		addr = address.upper()
 		for rx in regions:
@@ -74,12 +99,20 @@ with open(sys.argv[1], 'rb') as csvfile:
 				address = regions[rx]
 				break
 		if addr == '':
-			address = 'Unknown'
+			area = extract_area_code(row[6])
+			if area_codes.has_key(area):
+				address = area_codes[area]
+			else:
+				address = 'Unknown'
+
+		# Shorten package names
 		package = row[10]
 		if package == 'Class + Dinner + All Dancing Events + Lodging':
 			package = 'Hotel + All Events'
 		elif package == 'Class + Dinner + All Dancing Events':
 			package = 'All Events'
+
+		# Ages
 		try:
 			age = int(row[2])
 			if age <= 18:
@@ -92,6 +125,8 @@ with open(sys.argv[1], 'rb') as csvfile:
 				age = '31+'
 		except:
 			age = row[2]
+
+		# Registration month
 		timestamp = row[0][:1]
 		if timestamp == '2':
 			timestamp = 'February'
@@ -101,16 +136,26 @@ with open(sys.argv[1], 'rb') as csvfile:
 			timestamp = 'April'
 		elif timestamp == '5':
 			timestamp = 'May'
+
+		# Shorten boolean options
+		superstar = row[21]
+		if superstar == '':
+			superstar = 'No.'
+		else:
+			superstar = 'Yes.'
+
 		ceildh = row[17]
 		if ceildh == 'Yes, I will attend.':
 			ceildh = 'Yes.'
 		elif ceildh == 'No, I cannot make it and will check in Saturday morning.':
 			ceildh = 'No.'
+
 		walkthrough = row[16]
 		if walkthrough == 'Yes, I will attend the walk-through.':
 			walkthrough = 'Yes.'
 		elif walkthrough == 'No, I will not.':
 			walkthrough = 'No.'
+
 		record = {
 			'timestamp': timestamp,
 			'age': age,
