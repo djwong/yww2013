@@ -103,7 +103,6 @@ with open(sys.argv[1], 'rb') as csvfile:
 			if area_codes.has_key(area):
 				address = area_codes[area]
 			else:
-				print row[1]
 				address = 'Unknown'
 
 		# Shorten package names
