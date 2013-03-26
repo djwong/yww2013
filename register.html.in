@@ -239,7 +239,10 @@ addWindowEventHandler("load", function() {onload();});
 <!-- djwong added html formatting here -->
 <b>After April 1st</b>, those prices go up to $131 USD and $86 USD, respectively.  We <i>cannot</i> guarantee a hotel reservation after April 1st.
 
+Registration will close <b>April 26th</b> so that we can send a final count to the caterers for the dinner.
+
 If writing a check or a money order, please make it out to "RSCDS, Southwest Washington State Branch" and send it to:
+
 YWW 2013
 c/o Mintz
 P.O. Box 261
