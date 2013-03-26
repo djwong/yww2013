@@ -32,10 +32,10 @@ q_order = ['timestamp', 'age', 'gender', 'address', 'contact', 'package', \
 	 'payment', 'years_dancing', 'freq_dancing', 'elective', \
 	 'walkthrough', 'ceildh', 'superstar']
 regions = {
-	re.compile('[ ,]OR[ \n]*'): 'Oregon',
-	re.compile('[ ,]BC[ \n]*'): 'British Columbia',
-	re.compile('[ ,]WA[ \n]*'): 'Washington',
-	re.compile('[ ,]CA[ \n]*'): 'California',
+	re.compile('[ ,]*OR[ \n]*'): 'Oregon',
+	re.compile('[ ,]*BC[ \n]*'): 'British Columbia',
+	re.compile('[ ,]*WA[ \n]*'): 'Washington',
+	re.compile('[ ,]*CA[ \n]*'): 'California',
 }
 area_codes = {
 	'971': 'Oregon',
@@ -60,7 +60,7 @@ def extract_area_code(in_str):
 		return None
 
 	if out_str[0] == '1':
-		return out_str[:4]
+		return out_str[1:4]
 	return out_str[:3]
 
 # Transform file data into a bunch of key-value groups
@@ -103,6 +103,7 @@ with open(sys.argv[1], 'rb') as csvfile:
 			if area_codes.has_key(area):
 				address = area_codes[area]
 			else:
+				print row[1]
 				address = 'Unknown'
 
 		# Shorten package names
@@ -115,14 +116,14 @@ with open(sys.argv[1], 'rb') as csvfile:
 		# Ages
 		try:
 			age = int(row[2])
-			if age <= 18:
-				age = '0-18'
-			elif age > 18 and age <= 25:
-				age = '19-25'
-			elif age > 25 and age <= 30:
-				age = '26-30'
+			if age <= 17:
+				age = '0-17'
+			elif age > 17 and age <= 24:
+				age = '18-24'
+			elif age > 24 and age <= 29:
+				age = '25-29'
 			else:
-				age = '31+'
+				age = '30+'
 		except:
 			age = row[2]
 
