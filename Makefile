@@ -59,4 +59,5 @@ lindy.jpg \
 lea_maiolo.jpg \
 cribs.pdf \
 travel.jpg \
-you.jpg
+you.jpg \
+bike.kml
