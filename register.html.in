@@ -235,9 +235,9 @@ addWindowEventHandler("load", function() {onload();});
 <textarea name="entry.14" rows="8" cols="0" class="ss-q-long" id="entry_14" dir="auto"></textarea>
 </div></div></div> <div class="errorbox-good">
 <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Packages</h2>
-<div class="ss-section-description ss-no-ignore-whitespace">We offer two packages: a full package, which includes all dancing activities and a hotel reservation; and a commuter package, which does not include the hotel.  Full packages are $116 USD, and commuter packages are $71 USD.  A limited amount of home hosting is available at the commuter price.  Please contact <a href="mailto:yww2013@yahoo.com">yww2013@yahoo.com</a> directly for details.
+<div class="ss-section-description ss-no-ignore-whitespace">We offer two packages: a full package, which includes all dancing activities and a hotel reservation; and a commuter package, which does not include the hotel.  Full packages are $131 USD, and commuter packages are $86 USD.  A limited amount of home hosting is available at the commuter price.  Please contact <a href="mailto:yww2013@yahoo.com">yww2013@yahoo.com</a> directly for details.
 <!-- djwong added html formatting here -->
-<b>After April 1st</b>, those prices go up to $131 USD and $86 USD, respectively.  We <i>cannot</i> guarantee a hotel reservation after April 1st.
+The earlybird discount is no longer available.  We are no longer able to guarantee a hotel reservation.
 
 Registration will close <b>April 25th</b> so that we can send a final count to the caterers for the dinner.
 
@@ -257,8 +257,8 @@ You may also pay via PayPal.</div>
 <div class="ss-q-help" dir="ltr">Note: Only the first two options get you into YWW-only activities.  All prices are in USD.</div></label>
 <!-- djwong added some onchange handlers to the radio buttons, prices, and set a default button -->
 <ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.10" value="Class + Dinner + All Dancing Events + Lodging" id="group_10_1" class="ss-q-radio" aria-label="Class + Dinner + All Dancing Events + Lodging" type="radio" checked="true" onchange="change_package(0);">
-<label class="ss-choice-label" for="group_10_1">Class + Dinner + All Dancing Events + Lodging ($116)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Class + Dinner + All Dancing Events" id="group_10_2" class="ss-q-radio" aria-label="Class + Dinner + All Dancing Events" type="radio" onchange="change_package(1);">
-<label class="ss-choice-label" for="group_10_2">Class + Dinner + All Dancing Events ($71)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Dinner + Ball" id="group_10_3" class="ss-q-radio" aria-label="Dinner + Ball" type="radio" onchange="change_package(2);">
+<label class="ss-choice-label" for="group_10_1">Class + Dinner + All Dancing Events + Lodging ($131)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Class + Dinner + All Dancing Events" id="group_10_2" class="ss-q-radio" aria-label="Class + Dinner + All Dancing Events" type="radio" onchange="change_package(1);">
+<label class="ss-choice-label" for="group_10_2">Class + Dinner + All Dancing Events ($86)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Dinner + Ball" id="group_10_3" class="ss-q-radio" aria-label="Dinner + Ball" type="radio" onchange="change_package(2);">
 <label class="ss-choice-label" for="group_10_3">Dinner + Ball ($35)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Ball" id="group_10_4" class="ss-q-radio" aria-label="Ball" type="radio" onchange="change_package(3);">
 <label class="ss-choice-label" for="group_10_4">Ball ($30)</label></label></li></ul></div></div></div> <div class="errorbox-good">
 <div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_62760471"><div class="ss-q-title">How will you pay us?
