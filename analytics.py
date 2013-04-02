@@ -47,6 +47,7 @@ area_codes = {
 	'250': 'British Columbia',
 	'541': 'Oregon',
 	'509': 'Washington',
+	'425': 'Washington',
 }
 
 def extract_area_code(in_str):
