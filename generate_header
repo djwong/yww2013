@@ -26,6 +26,10 @@ cat > "$1" << EOF
 	<link rel="stylesheet" type="text/css" href="fonts.css"/>
 <!--<![endif]-->
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
+	<link rel="icon" href="yww-128.png"/>
+	<link rel="icon" href="yww-64.png"/>
+	<link rel="icon" href="yww-32.png"/>
+	<link rel="apple-touch-icon-precomposed" href="yww-144.png"/>
 	<style type="text/css">
 #header {
 	background: url('${BACKGROUND}.jpg');
