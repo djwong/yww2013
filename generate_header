@@ -25,6 +25,7 @@ cat > "$1" << EOF
 <!--[if !IE]><!-->
 	<link rel="stylesheet" type="text/css" href="fonts.css"/>
 <!--<![endif]-->
+	<script type="text/javascript" src="site.js"/>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
 	<link rel="icon" href="yww-128.png"/>
 	<link rel="icon" href="yww-64.png"/>
