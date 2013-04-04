@@ -65,4 +65,5 @@ travel.jpg \
 you.jpg \
 bike.kml \
 art/yww-144.png art/yww-128.png art/yww-64.png art/yww-32.png art/yww-16.png \
-site.js
+site.js \
+ceildh.jpg
