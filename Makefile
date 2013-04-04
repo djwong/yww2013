@@ -1,4 +1,4 @@
-TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html analytics.html travel.html
+TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html analytics.html travel.html ceildh.html
 DESTDIR=output/
 INSTALL=install
 
@@ -24,8 +24,11 @@ upload: install
 registration.csv:
 	wget 'http://docs.google.com/spreadsheet/ccc?key=0AtDnBlSkyNjodGNXaEJWUzYxcVV3cG9FUmllS1RUaHc&output=csv&usp=sharing' -O $@
 
-analytics.html.in: registration.csv
+analytics.html.in: registration.csv analytics.py
 	./analytics.py $< --html > $@
+
+ceildh.html.in: ceildh.html.in.in ceildh.txt crib.py
+	./crib.py $< $@
 
 clean:
 	rm -rf $(TARGETS) $(DESTDIR) registration.csv
