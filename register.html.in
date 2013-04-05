@@ -239,7 +239,7 @@ addWindowEventHandler("load", function() {onload();});
 <!-- djwong added html formatting here -->
 The earlybird discount is no longer available.  We are no longer able to guarantee a hotel reservation.
 
-Registration will close <b>April 25th</b> so that we can send a final count to the caterers for the dinner.
+Registration will close no later than <b>April 25th</b> so that we can send a final count to the caterers for the dinner.
 
 If writing a check or a money order, please make it out to "RSCDS, Southwest Washington State Branch" and send it to:
 
