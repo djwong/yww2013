@@ -42,6 +42,8 @@ def write_dance(dance_name, dance_number, output):
 	youtube = None
 	with file(dance_fname) as dancefile:
 		for danceline in dancefile:
+			if danceline[0] == '#':
+				continue
 			danceline = danceline.strip()
 			if in_instructions:
 				x = danceline.partition('	')
@@ -83,7 +85,9 @@ with file(sys.argv[2], "w") as output:
 		with file(crib_fname) as cribfile:
 			output.write('<table class="crib_table">\n')
 			for cribline in cribfile:
-				if cribline[:3] == "I: ":
+				if cribline[0] == '#':
+					continue
+				elif cribline[:3] == "I: ":
 					output.write('<tr class="crib_interlude"><td colspan="2">' + cribline[3:].strip() + '</td></tr>\n')
 				elif cribline[:3] == "D: ":
 					write_dance(cribline[3:].strip(), dance_number, output)
