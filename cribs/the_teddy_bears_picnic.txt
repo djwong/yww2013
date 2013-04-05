@@ -1,4 +1,5 @@
 Name: Teddy Bear's Picnic
+Youtube: A4uEkSwmol0
 Format: 4x32J, 4c set
  1- 8	1s Adv+Ret 1-4; 2s Adv+Ret 3-6; 3s Adv+Ret 5-8; 4s Advance 7-8 
  9-16	While 4s Retire, 1s start a Progressive Grand Chain

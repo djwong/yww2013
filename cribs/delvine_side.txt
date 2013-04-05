@@ -1,4 +1,5 @@
 Name: Delvine Side
+Youtube: 445n3D6KCK8
 Format: 8x32S, 3c/4c set
 Source: W Campbell  RSCDS Bk 2
  1- 8	1s+2s set & cross passing RSh, set & cross back passing RSh

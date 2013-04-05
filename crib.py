@@ -39,6 +39,7 @@ def write_dance(dance_name, dance_number, output):
 	in_instructions = False
 	source = ''
 	notes = None
+	youtube = None
 	with file(dance_fname) as dancefile:
 		for danceline in dancefile:
 			danceline = danceline.strip()
@@ -53,13 +54,19 @@ def write_dance(dance_name, dance_number, output):
 				source = danceline[8:]
 			elif danceline.startswith("Notes: "):
 				notes = danceline[7:]
+			elif danceline.startswith("Youtube: "):
+				youtube = danceline[9:]
 			else:
 				in_instructions = True
-				output.write('<tr class="crib_header" onclick="crib_toggle(\'crib%d\');"><td><span id="crib%d_ctl" class="crib_ctl">&#9654;</span><span class="crib_name">%s</span> (%s)</td><td>%s</td></tr>\n' % (dance_number, dance_number, name, fmt, source))
+				if youtube != None:
+					youtube_str = '<span class="crib_youtube">&nbsp;[<a href="http://www.youtube.com/watch?v=%s">video</a>]</span>' % youtube
+				else:
+					youtube_str = ''
+				output.write('<tr class="crib_header" onclick="crib_toggle(\'crib%d\');"><td><span id="crib%d_ctl" class="crib_ctl">&#9654;</span><span class="crib_name">%s</span> (%s)%s</td><td>%s</td></tr>\n' % (dance_number, dance_number, name, fmt, youtube_str, source))
 				output.write('<tr id="crib%d" class="crib_steps"><td colspan="2">\n' % dance_number)
 				output.write('	<table class="crib_step_table">\n')
 				if notes != None:
-					output.write('	<tr><td colspan="2">%s</td></tr>\n' % notes)
+					output.write('	<tr><td colspan="2" class="crib_step_bars">%s</td></tr>\n' % notes)
 				x = danceline.partition('	')
 				output.write('	<tr><td class="crib_step_bars">%s</td><td>%s</td>\n' % (x[0], x[2]))
 		if in_instructions:

@@ -172,6 +172,9 @@ a#register {
 	cursor: pointer;
 }
 @media print {
+	.crib_youtube {
+		display: none;
+	}
 	.crib_dropdown {
 		display: none;
 	}
