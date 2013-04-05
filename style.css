@@ -55,11 +55,26 @@ body {
 	color: #c0c0c0;
 	margin: 3px;
 }
+#main_logo {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
 #navigation {
 	font-family: "Trebuchet MS", sans-serif;
 	text-align: center;
 }
 @media print {
+	#main_title {
+		padding-left: 78px;
+	}
+	#main_subtitle {
+		padding-left: 78px;
+	}
+	#main_logo {
+		display: inline;
+	}
 	#container {
 		padding: 0.5em;
 		position: absolute;
