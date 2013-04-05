@@ -27,14 +27,22 @@ registration.csv:
 analytics.html.in: registration.csv analytics.py
 	./analytics.py $< --html > $@
 
+include ceildh.html.in.d
+ceildh.html.in.d: ceildh.html.in.in ceildh.txt crib_deps.py
+	./crib_deps.py $< $@ ceildh.html.in
+
 ceildh.html.in: ceildh.html.in.in ceildh.txt crib.py
 	./crib.py $< $@
+
+include ball.html.in.d
+ball.html.in.d: ball.html.in.in ball.txt crib_deps.py
+	./crib_deps.py $< $@ ball.html.in
 
 ball.html.in: ball.html.in.in ball.txt crib.py
 	./crib.py $< $@
 
 clean:
-	rm -rf $(TARGETS) $(DESTDIR) registration.csv
+	rm -rf $(TARGETS) $(DESTDIR) registration.csv ceildh.html.in.d ball.html.in.d
 
 FILES=\
 LinBiolinum_Bd.otf \
