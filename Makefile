@@ -30,6 +30,9 @@ analytics.html.in: registration.csv analytics.py
 ceildh.html.in: ceildh.html.in.in ceildh.txt crib.py
 	./crib.py $< $@
 
+ball.html.in: ball.html.in.in ball.txt crib.py
+	./crib.py $< $@
+
 clean:
 	rm -rf $(TARGETS) $(DESTDIR) registration.csv
 
