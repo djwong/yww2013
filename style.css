@@ -163,6 +163,7 @@ a#register {
 	vertical-align: top;
 }
 .crib_step_bars {
+	white-space: pre;
 	padding-left: 1em;
 	padding-right: 2em;
 }
