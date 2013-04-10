@@ -88,7 +88,8 @@ with open(sys.argv[1], 'rb') as csvfile:
 			}
 			continue
 		if row[1][:6] == 'Ignore' or \
-		   row[10] == 'Dinner + Ball':
+		   row[10] == 'Dinner + Ball' or \
+		   row[20] == 'Withdrawn.':
 			continue
 	
 		# Filter some of the data
