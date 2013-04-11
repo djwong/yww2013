@@ -198,6 +198,8 @@ a#register {
 	}
 	.crib_steps {
 		display: table-row;
+		/* horrible hack for ie6/7 */
+		display: block;
 	}
 }
 
