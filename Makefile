@@ -75,7 +75,7 @@ cribs.pdf \
 travel.jpg \
 you.jpg \
 bike.kml \
-art/yww-144.png art/yww-128.png art/yww-64.png art/yww-32.png art/yww-16.png art/yww-full.png \
+art/yww-144.png art/yww-128.png art/yww-64.png art/yww-32.png art/yww-16.png art/yww.svg \
 site.js \
 ceildh.jpg \
 cynthia.jpg
