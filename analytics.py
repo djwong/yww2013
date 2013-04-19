@@ -24,13 +24,13 @@ if len(sys.argv) > 2:
 
 # CSV Columns: timestamp name age gender allergies address phone email contact
 # parental package payment paypal years_dancing freq_dancing elective
-# walkthrough ceildh ceildh_act roommates other superstar crap; do
+# walkthrough ceilidh ceilidh_act roommates other superstar crap; do
 
 questions = None
 records = []
 q_order = ['timestamp', 'age', 'gender', 'address', 'contact', 'package', \
 	 'payment', 'years_dancing', 'freq_dancing', 'elective', \
-	 'walkthrough', 'ceildh', 'superstar']
+	 'walkthrough', 'ceilidh', 'superstar']
 regions = {
 	re.compile('[ ,]*OR[ \n]*'): 'Oregon',
 	re.compile('[ ,]*BC[ \n]*'): 'British Columbia',
@@ -83,7 +83,7 @@ with open(sys.argv[1], 'rb') as csvfile:
 				'freq_dancing': row[14],
 				'elective': row[15],
 				'walkthrough': row[16],
-				'ceildh': row[17],
+				'ceilidh': row[17],
 				'superstar': row[21],
 			}
 			continue
@@ -146,11 +146,11 @@ with open(sys.argv[1], 'rb') as csvfile:
 		else:
 			superstar = 'Yes.'
 
-		ceildh = row[17]
-		if ceildh == 'Yes, I will attend.':
-			ceildh = 'Yes.'
-		elif ceildh == 'No, I cannot make it and will check in Saturday morning.':
-			ceildh = 'No.'
+		ceilidh = row[17]
+		if ceilidh == 'Yes, I will attend.':
+			ceilidh = 'Yes.'
+		elif ceilidh == 'No, I cannot make it and will check in Saturday morning.':
+			ceilidh = 'No.'
 
 		walkthrough = row[16]
 		if walkthrough == 'Yes, I will attend the walk-through.':
@@ -170,7 +170,7 @@ with open(sys.argv[1], 'rb') as csvfile:
 			'freq_dancing': row[14],
 			'elective': row[15],
 			'walkthrough': walkthrough,
-			'ceildh': ceildh,
+			'ceilidh': ceilidh,
 			'superstar': superstar,
 		}
 		records.append(record)

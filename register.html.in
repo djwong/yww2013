@@ -217,14 +217,14 @@ addWindowEventHandler("load", function() {onload();});
 <ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.1424211747" value="Yes, I will attend the walk-through." id="group_1424211747_1" class="ss-q-radio" aria-label="Yes, I will attend the walk-through." type="radio">
 <label class="ss-choice-label" for="group_1424211747_1">Yes, I will attend the walk-through.</label></label></li> <li class="ss-choice-item"><label><input name="entry.1424211747" value="No, I will not." id="group_1424211747_2" class="ss-q-radio" aria-label="No, I will not." type="radio">
 <label class="ss-choice-label" for="group_1424211747_2">No, I will not.</label></label></li></ul></div></div></div> <div class="errorbox-good">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_798331101"><div class="ss-q-title">Are you coming to the Friday night ceildh?
+<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_798331101"><div class="ss-q-title">Are you coming to the Friday night cèilidh?
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 <span class="ss-required-asterisk">*</span></div>
 <div class="ss-q-help" dir="ltr"></div></label>
 <ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.1125084082" value="Yes, I will attend." id="group_1125084082_1" class="ss-q-radio" aria-label="Yes, I will attend." type="radio">
 <label class="ss-choice-label" for="group_1125084082_1">Yes, I will attend.</label></label></li> <li class="ss-choice-item"><label><input name="entry.1125084082" value="No, I cannot make it and will check in Saturday morning." id="group_1125084082_2" class="ss-q-radio" aria-label="No, I cannot make it and will check in Saturday morning." type="radio">
 <label class="ss-choice-label" for="group_1125084082_2">No, I cannot make it and will check in Saturday morning.</label></label></li></ul></div></div></div> <div class="errorbox-good">
-<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_399341518"><div class="ss-q-title">If you'd like to perform at the Friday ceildh, please describe your act and how much time you'd like:
+<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_399341518"><div class="ss-q-title">If you'd like to perform at the Friday cèilidh, please describe your act and how much time you'd like:
 </div>
 <div class="ss-q-help" dir="ltr">The Friday night ceilidh is a chance for you and the other workshop participants to show off your talents.</div></label>
 <textarea name="entry.399341518" rows="8" cols="0" class="ss-q-long" id="entry_399341518" dir="auto"></textarea>

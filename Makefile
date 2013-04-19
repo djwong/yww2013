@@ -1,4 +1,4 @@
-TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html analytics.html travel.html ceildh.html
+TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html analytics.html travel.html ceilidh.html
 DESTDIR=output/
 INSTALL=install
 
@@ -27,11 +27,11 @@ registration.csv:
 analytics.html.in: registration.csv analytics.py
 	./analytics.py $< --html > $@
 
-include ceildh.html.in.d
-ceildh.html.in.d: ceildh.html.in.in ceildh.txt crib_deps.py
-	./crib_deps.py $< $@ ceildh.html.in
+include ceilidh.html.in.d
+ceilidh.html.in.d: ceilidh.html.in.in ceilidh.txt crib_deps.py
+	./crib_deps.py $< $@ ceilidh.html.in
 
-ceildh.html.in: ceildh.html.in.in ceildh.txt crib.py
+ceilidh.html.in: ceilidh.html.in.in ceilidh.txt crib.py
 	./crib.py $< $@
 
 include ball.html.in.d
@@ -42,7 +42,7 @@ ball.html.in: ball.html.in.in ball.txt crib.py
 	./crib.py $< $@
 
 clean:
-	rm -rf $(TARGETS) $(DESTDIR) registration.csv ceildh.html.in.d ball.html.in.d
+	rm -rf $(TARGETS) $(DESTDIR) registration.csv ceilidh.html.in.d ball.html.in.d
 
 FILES=\
 LinBiolinum_Bd.otf \
@@ -77,5 +77,5 @@ you.jpg \
 bike.kml \
 art/yww-144.png art/yww-128.png art/yww-64.png art/yww-32.png art/yww-16.png art/yww.svg \
 site.js \
-ceildh.jpg \
+ceilidh.jpg \
 cynthia.jpg
