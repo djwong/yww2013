@@ -40,7 +40,7 @@ cat > "$1" << EOF
 <body>
     <div id="container">
 	<a href="index.html" id="header">
-		<span id="main_logo"><img src="yww.svg" width="67" height="85"/></span>
+		<span id="main_logo"><img src="yww.svg" width="67" height="85" alt="YWW Logo"/></span>
 		<span id="main_title">Youth Weekend West</span>
 		<span id="main_subtitle">May 3-5, 2013 in Vancouver, Wash.</span>
 		<span id="main_descr">${DESCR}</span>
