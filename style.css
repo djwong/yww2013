@@ -120,7 +120,8 @@ a.selected {
 	font-weight: bold;
 }
 a#register {
-	background: #ffc0c0;
+	color: #c0c0c0;
+	background: #f0f0f0;
 }
 #footer {
 	border-top: 1px solid gray;
