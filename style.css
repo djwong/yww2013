@@ -122,6 +122,9 @@ a.selected {
 a#register {
 	color: #c0c0c0;
 	background: #f0f0f0;
+	border-bottom: 1px solid #d0d0d0;
+	border-left: 1px solid #d0d0d0;
+	border-right: 1px solid #d0d0d0;
 }
 #footer {
 	border-top: 1px solid gray;
