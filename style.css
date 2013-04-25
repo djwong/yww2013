@@ -66,6 +66,13 @@ body {
 	text-align: center;
 }
 @media print {
+	a {
+		color: black;
+		text-decoration: none;
+	}
+	.maplink {
+		display: none;
+	}
 	#main_title {
 		padding-left: 78px;
 	}
