@@ -112,7 +112,7 @@ addWindowEventHandler("load", function() {onload();});
 <!-- djwong removed the h1 blob -->
 <div class="ss-form-heading">
 <p></p>
-<div class="ss-form-desc ss-no-ignore-whitespace">Youth Weekend West was started in 2003 as a fun and intense weekend of Scottish dance, where dancers can be exposed to new dances, refine their technique, and interact with dancers from other branches.  The event is open to dancers aged 12 to 30ish.  If you are enthusiastic about dancing, please register, even if you fall at the end of the 30ish range.  We'd love to have you!<p>Registration includes a welcome ceilidh, two days of Scottish Country Dance classes and electives, lunch on Saturday, a ball-walk through, a ticket for the "Dance Among the Stars" dinner and ball, and shared hotel accommodations at the Comfort Inn on 401 E 13th Street, Vancouver, WA.</p><p>Group accommodation is offered at the Vancouver, WA Comfort Inn and will be two double beds shared by four YWW dancers of the same gender. A complimentary hot breakfast buffet is offered each morning.</p><p>Please submit one registration form for each individual attending. Confirmation of registration will be sent upon receipt of payment.</p><p></p><p></p></div>
+<div class="ss-form-desc ss-no-ignore-whitespace">Youth Weekend was started in 2003 as a fun and intense weekend of Scottish dance, where dancers can be exposed to new dances, refine their technique, and interact with dancers from other branches.  The event is open to dancers aged 12 to 30ish.  If you are enthusiastic about dancing, please register, even if you fall at the end of the 30ish range.  We'd love to have you!<p>Registration includes a welcome ceilidh, two days of Scottish Country Dance classes and electives, lunch on Saturday, a ball-walk through, a ticket for the "Dance Among the Stars" dinner and ball, and shared hotel accommodations at the Comfort Inn on 401 E 13th Street, Vancouver, WA.</p><p>Group accommodation is offered at the Vancouver, WA Comfort Inn and will be two double beds shared by four Youth Weekend dancers of the same gender. A complimentary hot breakfast buffet is offered each morning.</p><p>Please submit one registration form for each individual attending. Confirmation of registration will be sent upon receipt of payment.</p><p></p><p></p></div>
 
 <hr class="ss-email-break" style="display:none;">
 <div class="ss-required-asterisk">* Required</div></div></div>
@@ -200,7 +200,7 @@ addWindowEventHandler("load", function() {onload();});
 <td class="ss-scalerow"><input name="entry.1203549286" value="0" id="group_1203549286_1" class="ss-q-radio" aria-label="0" type="radio"></td> <td class="ss-scalerow"><input name="entry.1203549286" value="1" id="group_1203549286_2" class="ss-q-radio" aria-label="1" type="radio"></td> <td class="ss-scalerow"><input name="entry.1203549286" value="2" id="group_1203549286_3" class="ss-q-radio" aria-label="2" type="radio"></td> <td class="ss-scalerow"><input name="entry.1203549286" value="3" id="group_1203549286_4" class="ss-q-radio" aria-label="3" type="radio"></td> <td class="ss-scalerow"><input name="entry.1203549286" value="4" id="group_1203549286_5" class="ss-q-radio" aria-label="4" type="radio"></td> <td class="ss-scalerow"><input name="entry.1203549286" value="5" id="group_1203549286_6" class="ss-q-radio" aria-label="5" type="radio"></td> <td class="ss-scalerow"><input name="entry.1203549286" value="6" id="group_1203549286_7" class="ss-q-radio" aria-label="6" type="radio"></td> <td class="ss-scalerow"><input name="entry.1203549286" value="7" id="group_1203549286_8" class="ss-q-radio" aria-label="7" type="radio"></td>
 <td class="ss-scalerow ss-rightlabel aria-todo" aria-hidden="">Every day!</td></tr></tbody></table></div></div></div> <div class="errorbox-good">
 <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Activities</h2>
-<div class="ss-section-description ss-no-ignore-whitespace">We'd like to know your preferences for the Youth Weekend West activities.  Upon completing this form, you will be given a web link so that you can return to this form at any time to change these answers.</div>
+<div class="ss-section-description ss-no-ignore-whitespace">We'd like to know your preferences for the Youth Weekend activities.  Upon completing this form, you will be given a web link so that you can return to this form at any time to change these answers.</div>
 </div></div></div> <div class="errorbox-good">
 <div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1309607816"><div class="ss-q-title">Which elective class will you take?
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
@@ -254,7 +254,7 @@ You may also pay via PayPal.</div>
 <div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1009"><div class="ss-q-title">Which package would you like?
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 <span class="ss-required-asterisk">*</span></div>
-<div class="ss-q-help" dir="ltr">Note: Only the first two options get you into YWW-only activities.  All prices are in USD.</div></label>
+<div class="ss-q-help" dir="ltr">Note: Only the first two options get you into Youth Weekend-only activities.  All prices are in USD.</div></label>
 <!-- djwong added some onchange handlers to the radio buttons, prices, and set a default button -->
 <ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.10" value="Class + Dinner + All Dancing Events + Lodging" id="group_10_1" class="ss-q-radio" aria-label="Class + Dinner + All Dancing Events + Lodging" type="radio" checked="true" onchange="change_package(0);">
 <label class="ss-choice-label" for="group_10_1">Class + Dinner + All Dancing Events + Lodging ($131)</label></label></li> <li class="ss-choice-item"><label><input name="entry.10" value="Class + Dinner + All Dancing Events" id="group_10_2" class="ss-q-radio" aria-label="Class + Dinner + All Dancing Events" type="radio" onchange="change_package(1);">
@@ -269,7 +269,7 @@ You may also pay via PayPal.</div>
 <ul class="ss-choices"><li class="ss-choice-item"><label><input name="entry.2066431272" value="Check or money order." id="group_2066431272_1" class="ss-q-radio" aria-label="Check or money order." type="radio" onchange="change_payment_option(0);" checked="true">
 <label class="ss-choice-label" for="group_2066431272_1">Check or money order.</label></label></li> <li class="ss-choice-item"><label><input name="entry.2066431272" value="PayPal." id="group_2066431272_2" class="ss-q-radio" aria-label="PayPal." type="radio" onchange="change_payment_option(1);">
 <!-- djwong the id of the radio button is used up above -->
-<label class="ss-choice-label" for="group_2066431272_2">PayPal. (Note: PayPal fees are charged to Youth Weekend West)</label></label></li></ul>
+<label class="ss-choice-label" for="group_2066431272_2">PayPal. (Note: PayPal fees are charged to Youth Weekend)</label></label></li></ul>
 <!-- djwong added paypal stuff here -->
 <div id="package_paypal" style="display: none;">Please use this button to add your registration to your PayPal cart:<br /><a href="javascript:add_package();"><img style="border: 0px;" src="http://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" alt="Add Package to Cart"></img></a> <a href="javascript:view_cart();"><img style="border: 0px;" src="http://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" alt="View Cart"></img></a></div>
 <!-- end djwong added paypal stuff here -->
@@ -300,7 +300,7 @@ You may also pay via PayPal.</div>
 </div></div></div> <div class="errorbox-good">
 <div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_919871729"><div class="ss-q-title">Is there anything else that you'd like us to know?
 </div>
-<div class="ss-q-help" dir="ltr">You're just about finished registering.  If you have any concerns, requests, or suggestions that would help us to help you enjoy Youth Weekend West, we'd like to read them!</div></label>
+<div class="ss-q-help" dir="ltr">You're just about finished registering.  If you have any concerns, requests, or suggestions that would help us to help you enjoy Youth Weekend, we'd like to read them!</div></label>
 <textarea name="entry.919871729" rows="8" cols="0" class="ss-q-long" id="entry_919871729" dir="auto"></textarea>
 </div></div></div>
 <input name="draftResponse" value="[]

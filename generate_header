@@ -11,7 +11,7 @@ BACKGROUND="$(grep "^$1;" files | cut -d ';' -f 5)"
 DESCR="$(grep "^$1;" files | cut -d ';' -f 6)"
 PRIVATE="$(grep "^$1;" files | cut -d ';' -f 7)"
 if [ "$1" != "index.html" ]; then
-	TITLE="YWW 2013: ${TITLE}"
+	TITLE="Youth Weekend 2013: ${TITLE}"
 fi
 
 cat > "$1" << EOF
@@ -40,8 +40,8 @@ cat > "$1" << EOF
 <body>
     <div id="container">
 	<a href="index.html" id="header">
-		<span id="main_logo"><img src="yww.svg" width="67" height="85" alt="YWW Logo"/></span>
-		<span id="main_title">Youth Weekend West</span>
+		<span id="main_logo"><img src="yww.svg" width="67" height="85" alt="YW Logo"/></span>
+		<span id="main_title">Youth Weekend</span>
 		<span id="main_subtitle">May 3-5, 2013 in Vancouver, Wash.</span>
 		<span id="main_descr">${DESCR}</span>
 	</a>
