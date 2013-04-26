@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Create 4-up booklets from a ps file.
+
+if [ ! -r "$1" -o -z "$2" -o "$1" == "--help" ]; then
+	echo "Usage: $0 input.ps output.ps"
+	exit 0
+fi
+
+PAGES="$(grep '^%%Pages: ' "$1" | awk '{print $2}')"
+# We lamely choke on psbook's empty pages.
+if [ "$((PAGES % 4))" -ne 0 ]; then
+	echo "ERROR: Source document MUST have a multiple of 4 pages."
+	exit 1
+fi
+
+TMPDIR="./tmp"
+rm -rf "${TMPDIR}"
+mkdir -p "${TMPDIR}"
+psbook < "$1" > "${TMPDIR}/booklet.ps"
+for i in $(seq 1 "${PAGES}"); do
+	psselect -p$i "${TMPDIR}/booklet.ps" "${TMPDIR}/page_$((i - 1)).ps"
+done
+PGS="$(for i in $(seq 0 "$((PAGES / 2 - 1))"); do
+	echo -n " ${TMPDIR}/page_$((i * 2)).ps ${TMPDIR}/page_$((i * 2 + 1)).ps"
+	echo -n " ${TMPDIR}/page_$((i * 2)).ps ${TMPDIR}/page_$((i * 2 + 1)).ps"
+done)"
+psjoin ${PGS} | psnup -n4 > "$2"
+
+#psnup -n4 > "$2"
+
+#pdf2ps booklet_test.pdf - | psbook | psnup -n4 > btt.ps
