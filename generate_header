@@ -14,6 +14,10 @@ if [ "$1" != "index.html" ]; then
 	TITLE="Youth Weekend 2013: ${TITLE}"
 fi
 
+if [ "${BACKGROUND}" = "group_pic" ]; then
+	HEIGHT_CSS="	height: 417px;"
+fi
+
 cat > "$1" << EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -34,6 +38,7 @@ cat > "$1" << EOF
 	<style type="text/css">
 #header {
 	background: url('${BACKGROUND}.jpg');
+	${HEIGHT_CSS}
 }
 </style>
 </head>
