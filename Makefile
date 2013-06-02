@@ -1,4 +1,4 @@
-TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html analytics.html travel.html ceilidh.html afterparty.html feedback.html
+TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html analytics.html travel.html ceilidh.html afterparty.html feedback.html fonts.css
 DESTDIR=output/
 INSTALL=install
 
@@ -21,6 +21,8 @@ upload: install
 
 .PHONY: registration.csv
 
+include fonts.mk
+
 registration.csv:
 	wget 'http://docs.google.com/spreadsheet/ccc?key=0AtDnBlSkyNjodGNXaEJWUzYxcVV3cG9FUmllS1RUaHc&output=csv&usp=sharing' -O $@
 
@@ -42,7 +44,7 @@ ball.html.in: ball.html.in.in ball.txt crib.py
 	./crib.py $< $@
 
 clean:
-	rm -rf $(TARGETS) $(DESTDIR) registration.csv ceilidh.html.in.d ball.html.in.d
+	rm -rf $(TARGETS) $(DESTDIR) registration.csv ceilidh.html.in.d ball.html.in.d $(CLEAN) ceilidh.html.in ball.html.in analytics.html.in
 
 FILES=\
 LinBiolinum_Bd.otf \
@@ -59,7 +61,6 @@ LinLibertine_It.otf \
 LinLibertine_It.ttf \
 LinLibertine_Re.otf \
 LinLibertine_Re.ttf \
-fonts.css \
 style.css \
 classes.jpg \
 contact.jpg \

@@ -1,5 +1,5 @@
 body {
-	font-family: "Palatino Linotype", "Book Antiqua", serif;
+	font-family: "Linux Libertine O", "Linux Libertine O External", "Palatino Linotype", "Book Antiqua", serif;
 	background: #afbdd3;
 	margin: 0px;
 }
@@ -25,7 +25,7 @@ body {
 	}
 }
 #header {
-	font-family: "Trebuchet MS", sans-serif;
+	font-family: "Linux Biolinum O", "Linux Biolinum O External", "Trebuchet MS", sans-serif;
 	display: block;
 	background-repeat: no-repeat;
 	max-width: 757px;
@@ -62,7 +62,7 @@ body {
 	left: 0px;
 }
 #navigation {
-	font-family: "Trebuchet MS", sans-serif;
+	font-family: "Linux Biolinum O", "Linux Biolinum O External", "Trebuchet MS", sans-serif;
 	text-align: center;
 }
 @media print {
