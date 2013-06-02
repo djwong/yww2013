@@ -26,9 +26,7 @@ cat > "$1" << EOF
 	<title>${TITLE}</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
-<!--[if !IE]><!-->
 	<link rel="stylesheet" type="text/css" href="fonts.css"/>
-<!--<![endif]-->
 	<script type="text/javascript" src="site.js"> </script>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
 	<link rel="icon" href="yww-128.png"/>
