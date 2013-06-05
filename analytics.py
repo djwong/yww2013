@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 # Generate fancy pie charts from the registration data
 # Copyright (C) 2013 Darrick J. Wong.  All rights reserved.
@@ -7,11 +7,11 @@
 import re
 import csv
 import sys
-import urllib
+import urllib.request, urllib.parse, urllib.error
 import datetime
 
 if len(sys.argv) < 2 or sys.argv[1] == '--help':
-	print "Usage: %s csvfile [--html]" % sys.argv[0]
+	print("Usage: %s csvfile [--html]" % sys.argv[0])
 	sys.exit(1)
 
 mode = 'text'
@@ -19,7 +19,7 @@ if len(sys.argv) > 2:
 	if sys.argv[2] == '--html':
 		mode = 'html'
 	else:
-		print "Usage: %s csvfile [--html]" % sys.argv[0]
+		print("Usage: %s csvfile [--html]" % sys.argv[0])
 		sys.exit(1)
 
 # CSV Columns: timestamp name age gender allergies address phone email contact
@@ -66,7 +66,7 @@ def extract_area_code(in_str):
 
 # Transform file data into a bunch of key-value groups
 first_row = True
-with open(sys.argv[1], 'rb') as csvfile:
+with open(sys.argv[1], 'r') as csvfile:
 	csvreader = csv.reader(csvfile)
 	for row in csvreader:
 		if first_row:
@@ -102,7 +102,7 @@ with open(sys.argv[1], 'rb') as csvfile:
 				break
 		if addr == '':
 			area = extract_area_code(row[6])
-			if area_codes.has_key(area):
+			if area in area_codes:
 				address = area_codes[area]
 			else:
 				address = 'Unknown'
@@ -197,24 +197,20 @@ for q_key in q_order:
 # Print report
 def report_text():
 	for q_key in q_order:
-		print questions[q_key]
-		r_keys = responses[q_key].keys()
-		r_keys.sort()
-		for response in r_keys:
-			print '%s: %.0f%%' % (response,
-				100.0 * responses[q_key][response] / num_replies)
-		print ''
+		print(questions[q_key])
+		for response in sorted(responses[q_key]):
+			print('%s: %.0f%%' % (response,
+				100.0 * responses[q_key][response] / num_replies))
+		print('')
 
 def report_html():
-	print '<h1>Who\'s Coming?</h1>'
-	print '<p>A little bit of aggregated information about the %d people registered as of %s.  There shouldn\'t be any personally-identifiable information here.  If there is, tell Darrick.</p>' % (num_replies, datetime.datetime.now().strftime('%c'))
+	print('<h1>Who\'s Coming?</h1>')
+	print('<p>A little bit of aggregated information about the %d people registered as of %s.  There shouldn\'t be any personally-identifiable information here.</p>' % (num_replies, datetime.datetime.now().strftime('%c')))
 	for q_key in q_order:
-		print '<h2>%s</h2>' % questions[q_key]
-		r_keys = responses[q_key].keys()
-		r_keys.sort()
+		print('<h2>%s</h2>' % questions[q_key])
 		chd = None
 		chl = None
-		for response in r_keys:
+		for response in sorted(responses[q_key]):
 			# Numbers
 			if chd == None:
 				chd = 't:%d' % responses[q_key][response]
@@ -225,11 +221,11 @@ def report_html():
 				chl = '%s (%.0f%%)' % (response, 100.0 * responses[q_key][response] / num_replies)
 			else:
 				chl = chl + '|%s (%.0f%%)' % (response, 100.0 * responses[q_key][response] / num_replies)
-		chd = urllib.quote_plus(chd, '|,:')
-		chl = urllib.quote_plus(chl, '|,:')
+		chd = urllib.parse.quote_plus(chd, '|,:')
+		chl = urllib.parse.quote_plus(chl, '|,:')
 		url = 'http://chart.googleapis.com/chart?cht=p&amp;chs=500x200&amp;chco=a85f7c&amp;chdls=000000,18&amp;chds=a&amp;chd=%s&amp;chl=%s' % (chd, chl)
-		print '<img src="%s" alt="%s"></img>' % (url, questions[q_key])
-		print ''
+		print('<img src="%s" alt="%s"></img>' % (url, questions[q_key]))
+		print('')
 
 x = "report_%s()" % mode
 eval(x)
