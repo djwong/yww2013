@@ -1,8 +1,13 @@
 TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html analytics.html travel.html ceilidh.html afterparty.html feedback.html fonts.css
 DESTDIR=output/
 INSTALL=install
+FONTFORGE=fontforge
+TOOLS=$(FONTFORGE) $(INSTALL) wget bash python3 lftp bash
 
-all: $(TARGETS)
+all: build_check $(TARGETS)
+
+build_check:;
+	@bash -c "type $(TOOLS) > /dev/null"
 
 install: $(TARGETS) $(FILES)
 	$(INSTALL) -d $(DESTDIR)
