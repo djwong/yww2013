@@ -8,6 +8,7 @@ install: $(TARGETS) $(FILES)
 	$(INSTALL) -d $(DESTDIR)
 	$(INSTALL) -p -m 0644 $(TARGETS) $(DESTDIR)
 	$(INSTALL) -p -m 0644 $(FILES) $(DESTDIR)
+	$(INSTALL) -p -m 0644 $(WOFF_FROM_OTF_FONTS) $(DESTDIR)
 
 .PHONY: install upload
 
@@ -47,20 +48,6 @@ clean:
 	rm -rf $(TARGETS) $(DESTDIR) registration.csv ceilidh.html.in.d ball.html.in.d $(CLEAN) ceilidh.html.in ball.html.in analytics.html.in
 
 FILES=\
-LinBiolinum_Bd.otf \
-LinBiolinum_Bd.ttf \
-LinBiolinum_It.otf \
-LinBiolinum_It.ttf \
-LinBiolinum_Re.otf \
-LinBiolinum_Re.ttf \
-LinLibertine_Bd.otf \
-LinLibertine_Bd.ttf \
-LinLibertine_BI.otf \
-LinLibertine_BI.ttf \
-LinLibertine_It.otf \
-LinLibertine_It.ttf \
-LinLibertine_Re.otf \
-LinLibertine_Re.ttf \
 style.css \
 classes.jpg \
 contact.jpg \
