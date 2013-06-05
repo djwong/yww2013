@@ -34,14 +34,14 @@ ceilidh.html.in.d: ceilidh.html.in.in ceilidh.txt crib_deps.py
 	./crib_deps.py $< $@ ceilidh.html.in
 
 ceilidh.html.in: ceilidh.html.in.in ceilidh.txt crib.py
-	./crib.py $< $@
+	./crib.py -i $< $@
 
 include ball.html.in.d
 ball.html.in.d: ball.html.in.in ball.txt crib_deps.py
 	./crib_deps.py $< $@ ball.html.in
 
 ball.html.in: ball.html.in.in ball.txt crib.py
-	./crib.py $< $@
+	./crib.py -i $< $@
 
 clean:
 	rm -rf $(TARGETS) $(DESTDIR) registration.csv ceilidh.html.in.d ball.html.in.d $(CLEAN) ceilidh.html.in ball.html.in analytics.html.in
