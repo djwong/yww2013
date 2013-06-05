@@ -1,8 +1,13 @@
 TARGETS=index.html schedule.html classes.html ball.html register.html staff.html contact.html history.html analytics.html travel.html ceilidh.html afterparty.html feedback.html fonts.css
 DESTDIR=output/
 INSTALL=install
+FONTFORGE=fontforge
+TOOLS=$(FONTFORGE) $(INSTALL) wget bash python3 lftp bash
 
-all: $(TARGETS)
+all: build_check $(TARGETS)
+
+build_check:;
+	@bash -c "type $(TOOLS) > /dev/null"
 
 install: $(TARGETS) $(FILES)
 	$(INSTALL) -d $(DESTDIR)
@@ -35,14 +40,14 @@ ceilidh.html.in.d: ceilidh.html.in.in ceilidh.txt crib_deps.py
 	./crib_deps.py $< $@ ceilidh.html.in
 
 ceilidh.html.in: ceilidh.html.in.in ceilidh.txt crib.py
-	./crib.py $< $@
+	./crib.py -i $< $@
 
 include ball.html.in.d
 ball.html.in.d: ball.html.in.in ball.txt crib_deps.py
 	./crib_deps.py $< $@ ball.html.in
 
 ball.html.in: ball.html.in.in ball.txt crib.py
-	./crib.py $< $@
+	./crib.py -i $< $@
 
 clean:
 	rm -rf $(TARGETS) $(DESTDIR) registration.csv ceilidh.html.in.d ball.html.in.d $(CLEAN) ceilidh.html.in ball.html.in analytics.html.in

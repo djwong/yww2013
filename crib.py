@@ -1,7 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
-# Take a html template, a dance program, and dance cribs, and generate the html
-# part of an interactive cribsheet.  (CSS+JS still required.)
+# Take a crib description file and generate an interactive HTML crib sheet.
+# CSS/JS are still required.  This is NOT QUITE the same script as was on the
+# Youth Weekend West 2013 site.
 # Copyright 2013 Darrick J. Wong.  All rights reserved.
 
 # Dance program file format:
@@ -12,25 +13,26 @@
 # Name: <name of dance>
 # Format: <what kind of dance -- 8x32R, 4x32S, etc>
 # Source: <where you got it from>
-# <bars>	<steps>
+# Youtube: <the youtube video id>
+# Endnote: Notes to put at the end 
+# <other key: value pairs which are copied verbatim>
+# BARS
+# <bars>\tab	<steps>
 #
-# Note: Any line not starting with Name:/Format:/Source: is assumed to be
-# the start of dance figure instructions.
-#
-# Dance crib files should be cribs/<filename_of_dance>.txt
+# Dance crib files should be dances/<filename_of_dance>.txt
 # wherein the "name of dance" above has been converted to lowercase, the
 # spaces replaced with underscores, and all non alphanumeric letters removed.
-# Hence, "Postie's Jig" becomes "cribs/posties_jig.txt".
+# Hence, "Postie's Jig" becomes "dances/posties_jig.txt".
+#
+# Look for anything with "crib_" in the name in style2.css and site2.js,
+# if you're trying to extract the crib generator code.
 
 import sys
 import cgi
+import hashlib
 
-if len(sys.argv) == 1 or len(sys.argv) > 1 and sys.argv[1] == "--help":
-	print "Usage: %s template" % sys.argv[0]
-	sys.exit(0)
-
-def write_dance(dance_name, dance_number, output):
-	dance_fname = 'cribs/'
+def write_dance(dance_name, output):
+	dance_fname = 'dances/'
 	for letter in dance_name.lower():
 		if letter.isalnum():
 			dance_fname = dance_fname + letter
@@ -39,10 +41,14 @@ def write_dance(dance_name, dance_number, output):
 	dance_fname = dance_fname + '.txt'
 	in_instructions = False
 	source = ''
-	notes = None
 	youtube = None
 	endnote = None
-	with file(dance_fname) as dancefile:
+	notes = []
+	alg = hashlib.sha1()
+	dance_id = '%s:%s' % (dance_fname, output.name)
+	alg.update(dance_id.encode('utf-8'))
+	dance_id = alg.hexdigest()
+	with open(dance_fname) as dancefile:
 		for danceline in dancefile:
 			if danceline[0] == '#':
 				continue
@@ -56,46 +62,70 @@ def write_dance(dance_name, dance_number, output):
 				fmt = danceline[8:]
 			elif danceline.startswith("Source: "):
 				source = danceline[8:]
-			elif danceline.startswith("Notes: "):
-				notes = danceline[7:]
 			elif danceline.startswith("Youtube: "):
 				youtube = danceline[9:]
 			elif danceline.startswith("Endnote: "):
 				endnote = danceline[9:]
-			else:
+			elif danceline == 'BARS':
 				in_instructions = True
 				if youtube != None:
 					youtube_str = '<span class="crib_youtube">&nbsp;[<a href="http://www.youtube.com/watch?v=%s">video</a>]</span>' % youtube
 				else:
 					youtube_str = ''
-				output.write('<tr class="crib_header" onclick="crib_toggle(\'crib%d\');"><td><span id="crib%d_ctl" class="crib_ctl">&#9654;</span><span class="crib_name">%s</span> (%s)%s</td><td>%s</td></tr>\n' % (dance_number, dance_number, cgi.escape(name), cgi.escape(fmt), youtube_str, cgi.escape(source)))
-				output.write('<tr id="crib%d" class="crib_steps"><td colspan="2">\n' % dance_number)
-				if notes != None:
-					output.write('	<p>%s</p>\n' % cgi.escape(notes))
+				output.write('<tr class="crib_header" onclick="crib_toggle(\'crib_%s\');"><td><span id="crib_%s_ctl" class="crib_ctl">&#9654;</span><span class="crib_name">%s</span> (%s)%s</td><td>%s</td></tr>\n' % (dance_id, dance_id, cgi.escape(name), cgi.escape(fmt), youtube_str, cgi.escape(source)))
+				output.write('<tr id="crib_%s" class="crib_steps"><td colspan="2">\n' % dance_id)
 				output.write('	<table class="crib_step_table">\n')
-				x = danceline.partition('	')
-				output.write('	<tr><td class="crib_step_bars">%s</td><td>%s</td></tr>\n' % (cgi.escape(x[0]), cgi.escape(x[2])))
+				for note in notes:
+					output.write('	<tr><td class="crib_note" colspan="2">%s</td></tr>\n' % cgi.escape(note))
+			else:
+				notes.append(danceline)
 		if in_instructions:
 			output.write('	</table>\n')
 			if endnote != None:
 				output.write('<p>%s</p>\n' % cgi.escape(endnote))
 			output.write('</td></tr>\n')
 
-with file(sys.argv[2], "w") as output:
-	dance_number = 0
-	for line in file(sys.argv[1]):
+def generate_crib(cribfd, outfd):
+	'''Given an input crib file, generate an output.'''
+
+	outfd.write('<table class="crib_table">\n')
+	for cribline in cribfd:
+		if cribline[0] == '#':
+			continue
+		elif cribline[:3] == "I: ":
+			outfd.write('<tr class="crib_interlude"><td colspan="2">' + cgi.escape(cribline[3:].strip()) + '</td></tr>\n')
+		elif cribline[:3] == "D: ":
+			write_dance(cribline[3:].strip(), outfd)
+	outfd.write('</table>\n');
+
+def inject_cribs(templatefd, outfd):
+	'''Given a template file full of CRIB: statements, paste in the cribs.'''
+
+	for line in templatefd:
 		if not line[:5] == "CRIB:":
-			output.write(line)
+			outfd.write(line)
 			continue
 		crib_fname = line[5:].strip()
-		with file(crib_fname) as cribfile:
-			output.write('<table class="crib_table">\n')
-			for cribline in cribfile:
-				if cribline[0] == '#':
-					continue
-				elif cribline[:3] == "I: ":
-					output.write('<tr class="crib_interlude"><td colspan="2">' + cgi.escape(cribline[3:].strip()) + '</td></tr>\n')
-				elif cribline[:3] == "D: ":
-					write_dance(cribline[3:].strip(), dance_number, output)
-					dance_number = dance_number + 1
-			output.write('</table>\n');
+		generate_crib(open(crib_fname), outfd)
+
+def print_help():
+	print("Usage: %s [-i template outfile|-g templates...]" % sys.argv[0])
+	sys.exit(0)
+
+# Main code
+if __name__ == '__main__':
+	if len(sys.argv) == 1 or '--help' in sys.argv:
+		print_help()
+
+	if sys.argv[1] == '-i' and len(sys.argv) == 4:
+		inject_cribs(open(sys.argv[2]), open(sys.argv[3], 'w'))
+	elif sys.argv[1] == '-g' and len(sys.argv) > 2:
+		for fname in sys.argv[2:]:
+			dot_location = fname.rfind('.')
+			if dot_location >= 0:
+				outfname = fname[:dot_location] + ".crib"
+			else:
+				outfname = fname + ".crib"
+			generate_crib(open(fname), open(outfname, 'w'))
+	else:
+		print_help()
