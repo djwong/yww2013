@@ -11,7 +11,7 @@ BACKGROUND="$(grep "^$1;" files | cut -d ';' -f 5)"
 DESCR="$(grep "^$1;" files | cut -d ';' -f 6)"
 PRIVATE="$(grep "^$1;" files | cut -d ';' -f 7)"
 if [ "$1" != "index.html" ]; then
-	TITLE="Youth Weekend 2013: ${TITLE}"
+	TITLE="Youth Weekend 2014: ${TITLE}"
 fi
 
 if [ "${BACKGROUND}" = "group_pic" ]; then
@@ -45,7 +45,7 @@ cat > "$1" << EOF
 	<a href="index.html" id="header">
 		<span id="main_logo"><img src="yww.svg" width="67" height="85" alt="YW Logo"/></span>
 		<span id="main_title">Youth Weekend</span>
-		<span id="main_subtitle">May 3-5, 2013 in Vancouver, Wash.</span>
+		<span id="main_subtitle">May 2014 in Bellingham, Wash.</span>
 		<span id="main_descr">${DESCR}</span>
 	</a>
 
@@ -73,7 +73,7 @@ EOF
 
 if [ "${OBSOLETE}" != "no" ]; then
 	cat >> "$1" << EOF
-	<div id="obsolete"><strong>Notice:</strong> This page has not been updated with 2013 information.  Please check back later.</div>
+	<div id="obsolete"><strong>Notice:</strong> This page has not been updated with 2014 information.  Please check back later.</div>
 EOF
 fi
 

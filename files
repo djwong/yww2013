@@ -1,14 +1,14 @@
 #filename;title;obsolete;visible;background;background_descr;private
-index.html;Youth Weekend 2013;no;yes;group_pic;2013 YWW Group;no
+index.html;Youth Weekend 2014;no;yes;group_pic;2013 YWW Group;no
 history.html;History;no;yes;history;Lizzie, who put together YWW 2012;no
-schedule.html;Schedule;no;yes;schedule;Combined class, 2012;no
-travel.html;Travel;no;yes;contact;SCD in St. Andrews;no
-ceilidh.html;Cèilidh;no;yes;ceilidh;2008 Portland Ball;no
-classes.html;Classes;no;yes;classes;Cape Breton step class;no
-ball.html;Ball;no;yes;header;The 2012 ball;no
-staff.html;About Us;no;yes;travel;Kathlleen, Darrick, and Don at the Portland Ball;no
-contact.html;Contact;no;no;musicians;Andy Imbrie and David Knight;no
-register.html;Register!;no;yes;register;Fort Vancouver;no
-analytics.html;You;no;no;you;Group photo, 2012;yes
-afterparty.html;After Party;no;no;you;2012 YWW Group;no
-feedback.html;Feedback;no;no;you;2012 YWW Group;no
+schedule.html;Schedule;yes;yes;schedule;Combined class, 2012;no
+travel.html;Travel;yes;yes;contact;SCD in St. Andrews;no
+ceilidh.html;Cèilidh;yes;yes;ceilidh;2008 Portland Ball;no
+classes.html;Classes;yes;yes;classes;Cape Breton step class;no
+ball.html;Ball;yes;yes;header;The 2012 ball;no
+staff.html;About Us;yes;yes;travel;Kathlleen, Darrick, and Don at the Portland Ball;no
+contact.html;Contact;yes;no;musicians;Andy Imbrie and David Knight;no
+register.html;Register!;yes;yes;register;Fort Vancouver;no
+analytics.html;You;yes;no;you;Group photo, 2012;yes
+afterparty.html;After Party;yes;no;you;2012 YWW Group;no
+feedback.html;Feedback;yes;no;you;2012 YWW Group;no
