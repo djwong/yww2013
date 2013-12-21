@@ -197,6 +197,10 @@ a#register {
 .crib_name {
 	font-weight: bold;
 	cursor: pointer;
+	text-decoration: none;
+}
+a.crib_name {
+	color: black;
 }
 @media print {
 	.crib_youtube {

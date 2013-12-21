@@ -13,7 +13,7 @@
 # Name: <name of dance>
 # Format: <what kind of dance -- 8x32R, 4x32S, etc>
 # Source: <where you got it from>
-# Youtube: <the youtube video id>
+# Youtube: <the youtube video id>, <more youtube ids>
 # Endnote: Notes to put at the end 
 # <other key: value pairs which are copied verbatim>
 # BARS
@@ -31,71 +31,99 @@ import sys
 import cgi
 import hashlib
 import uuid
+import os
+import re
 
-def write_dance(dance_name, output):
-	dance_fname = 'dances/'
+DEBUG=' border=1'
+DEBUG=''
+
+def dance_name_to_file_name(dance_name):
+	file_name = ''
 	for letter in dance_name.lower():
 		if letter.isalnum():
-			dance_fname = dance_fname + letter
+			file_name = file_name + letter
 		elif letter == ' ':
-			dance_fname = dance_fname + '_'
-	dance_fname = dance_fname + '.txt'
-	in_instructions = False
-	source = ''
-	youtube = None
-	endnote = None
-	notes = []
+			file_name = file_name + '_'
+	return file_name
+
+def write_dance(crib_name, dance_name, output):
+	dance_fname = 'dances/' + dance_name_to_file_name(dance_name) + '.txt'
 	alg = hashlib.sha1()
-	alg.update(str(uuid.uuid4()).encode('utf-8'))
+	alg.update((crib_name + dance_name).encode('utf-8')) #str(uuid.uuid4()).encode('utf-8'))
 	dance_id = alg.hexdigest()
 	with open(dance_fname) as dancefile:
+		in_instructions = False
+		props = {}
 		for danceline in dancefile:
-			if danceline[0] == '#':
+			line = danceline.strip()
+			if len(line) == 0 or line[0] == '#':
 				continue
-			danceline = danceline.strip()
-			if in_instructions:
-				x = danceline.partition('	')
-				output.write('	<tr><td class="crib_step_bars">%s</td><td>%s</td></tr>\n' % (cgi.escape(x[0]), cgi.escape(x[2])))
-			elif danceline.startswith("Name: "):
-				name = danceline[6:]
-			elif danceline.startswith("Format: "):
-				fmt = danceline[8:]
-			elif danceline.startswith("Source: "):
-				source = danceline[8:]
-			elif danceline.startswith("Youtube: "):
-				youtube = danceline[9:]
-			elif danceline.startswith("Endnote: "):
-				endnote = danceline[9:]
-			elif danceline == 'BARS':
+			elif in_instructions:
+				(bars, sep, figure) = line.partition('\t')
+				bars = re.sub(r'\s*-\s*', '-', bars.strip())
+				output.write('	<tr><td class="crib_step_bars">%s</td>\n' % cgi.escape(bars))
+				output.write('	<td class="crib_step_figures">%s</td></tr>\n' % cgi.escape(figure))
+			elif line == 'BARS':
 				in_instructions = True
-				if youtube != None:
-					youtube_str = '<span class="crib_youtube">&nbsp;[<a href="http://www.youtube.com/watch?v=%s">video</a>]</span>' % youtube
-				else:
-					youtube_str = ''
-				output.write('<tr class="crib_header" onclick="crib_toggle(\'crib_%s\');"><td><span id="crib_%s_ctl" class="crib_ctl">&#9654;</span><span class="crib_name">%s</span> (%s)%s</td><td>%s</td></tr>\n' % (dance_id, dance_id, cgi.escape(name), cgi.escape(fmt), youtube_str, cgi.escape(source)))
-				output.write('<tr id="crib_%s" class="crib_steps"><td colspan="2">\n' % dance_id)
-				output.write('	<table class="crib_step_table">\n')
-				for note in notes:
-					output.write('	<tr><td class="crib_note" colspan="2">%s</td></tr>\n' % cgi.escape(note))
+
+				# Dance file missing any keys?
+				reqd_keys = set(['Name', 'Format', 'Source'])
+				found_keys = set(props) & reqd_keys
+				missing_keys = found_keys ^ reqd_keys
+				if missing_keys:
+					raise Exception("%s: Missing required keys: %s" % (dance_fname, missing_keys))
+
+				# Set up youtube links
+				youtube_str = ''
+				if 'Youtube' in props:
+					videos = props['Youtube'].split(", ")
+					youtube_str = '<span class="crib_youtube">&nbsp;['
+					if len(videos) == 1:
+						youtube_str = youtube_str + '<a href="http://www.youtube.com/watch?v=%s">video</a>' % props['Youtube']
+					else:
+						youtube_str = youtube_str + 'videos: '
+						vlinks = []
+						num = 1
+						for video in videos:
+							vlinks.append('<a href="http://www.youtube.com/watch?v=%s">%d</a>' % (video, num))
+							num = num + 1
+						youtube_str = youtube_str + ", ".join(vlinks)
+					youtube_str = youtube_str + ']</span>'
+
+				# Emit dance header
+				output.write('<tr class="crib_header">\n')
+				output.write('<td><span id="crib_%s_ctl" class="crib_ctl" onclick="crib_toggle(\'crib_%s\');">&#9654;</span></td>\n' % (dance_id, dance_id))
+				output.write('<td class="crib_name_cell"><div><a id="dance_%s"></a><a class="crib_name" onclick="crib_toggle(\'crib_%s\'); return false;" href="#dance_%s">%s</a>%s</div><div class="crib_source">%s</div></td>\n' % (dance_id, dance_id, dance_id, cgi.escape(props['Name']), youtube_str, cgi.escape(props['Source'])))
+				output.write('<td class="crib_format">%s</td>\n' % cgi.escape(props['Format']))
+				output.write('</tr>\n')
+
+				output.write('<tr id="crib_%s" class="crib_steps"><td></td><td style="padding: 0px;" colspan="2">\n' % dance_id)
+				output.write('	<table class="crib_step_table"%s>\n' % DEBUG)
+				for key in props:
+					if key in ['Youtube', 'Name', 'Format', 'Source', 'Endnote']:
+						continue
+					output.write('	<tr><td class="crib_note" colspan="2"><b>%s:</b> %s</td></tr>\n' % (cgi.escape(key), cgi.escape(props[key])))
 			else:
-				notes.append(danceline)
+				(key, sep, value) = line.partition(': ')
+				props[key] = value
+
 		if in_instructions:
 			output.write('	</table>\n')
-			if endnote != None:
-				output.write('<p>%s</p>\n' % cgi.escape(endnote))
+			if 'Endnote' in props:
+				output.write('<p>%s</p>\n' % cgi.escape(props['Endnote']))
 			output.write('</td></tr>\n')
 
-def generate_crib(cribfd, outfd):
+def generate_crib(crib_name, cribfd, outfd):
 	'''Given an input crib file, generate an output.'''
 
-	outfd.write('<table class="crib_table">\n')
+	outfd.write('<table class="crib_table"%s>\n' % DEBUG)
 	for cribline in cribfd:
 		if cribline[0] == '#':
 			continue
 		elif cribline[:3] == "I: ":
-			outfd.write('<tr class="crib_interlude"><td colspan="2">' + cgi.escape(cribline[3:].strip()) + '</td></tr>\n')
+			outfd.write('<tr class="crib_interlude"><td colspan="3">' + cgi.escape(cribline[3:].strip()) + '</td></tr>\n')
 		elif cribline[:3] == "D: ":
-			write_dance(cribline[3:].strip(), outfd)
+			write_dance(crib_name, cribline[3:].strip(), outfd)
 	outfd.write('</table>\n');
 
 def inject_cribs(templatefd, outfd):
@@ -106,7 +134,7 @@ def inject_cribs(templatefd, outfd):
 			outfd.write(line)
 			continue
 		crib_fname = line[5:].strip()
-		generate_crib(open(crib_fname), outfd)
+		generate_crib(crib_fname, open(crib_fname), outfd)
 
 def print_help():
 	print("Usage: %s [-i template outfile|-g templates...]" % sys.argv[0])
@@ -126,6 +154,11 @@ if __name__ == '__main__':
 				outfname = fname[:dot_location] + ".crib"
 			else:
 				outfname = fname + ".crib"
-			generate_crib(open(fname), open(outfname, 'w'))
+			try:
+				generate_crib(fname, open(fname), open(outfname, 'w'))
+			except Exception as e:
+				print(e)
+				os.remove(outfname)
+				sys.exit(1)
 	else:
 		print_help()
