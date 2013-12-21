@@ -10,3 +10,11 @@ function crib_toggle(id)
 		y.text('▶');
 	}
 }
+
+function crib_ready()
+{
+	var x = location.hash;
+	x = x.replace(/^#dance_/, "crib_");
+	if ($('#' + x).length)
+		crib_toggle(x);
+}
