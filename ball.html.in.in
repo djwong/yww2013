@@ -16,6 +16,8 @@ the two events.</p>
 crib sheet.  The complete crib will print on your printer.</p>
 CRIB:ball.txt
 
+	<p class="noprint">[<a href="javascript:crib_toggle_all(true);">Expand All</a> | <a href="javascript:crib_toggle_all(false);">Collapse All</a>]</p>
+
 	<h2>Directions:</h2>
 
 	<p>The ball will be at St. Luke's Episcopal Church, 426 E. Fourth Plain

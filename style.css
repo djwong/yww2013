@@ -236,13 +236,8 @@ a.crib_name {
 	.crib_dropdown {
 		display: none;
 	}
-	.crib_ctl {
+	.noprint {
 		display: none;
-	}
-	.crib_steps {
-		/* horrible hack for ie6/7 */
-		display: block;
-		display: table-row;
 	}
 }
 
