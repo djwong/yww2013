@@ -16,13 +16,14 @@ def write_dance(dance_name, output):
 	output.write('%s.txt ' % dance_fname)
 
 if __name__ == "__main__":
-	if len(sys.argv) != 2 or len(sys.argv) > 1 and sys.argv[1] == "--help":
-		print "Usage: %s template" % sys.argv[0]
+	if len(sys.argv) != 4 or (len(sys.argv) > 1 and sys.argv[1] == "--help"):
+		print "Usage: %s template target output" % sys.argv[0]
 		sys.exit(0)
 
-	sys.stdout.write('%s.crib: ' % sys.argv[1][:-4])
 	dance_number = 0
-	for cribline in file(sys.argv[1]):
-		if cribline[:3] == "D: ":
-			write_dance(cribline[3:].strip(), sys.stdout)
-	sys.stdout.write('\n')
+	with file(sys.argv[3], 'w') as output:
+		output.write('%s: ' % sys.argv[2])
+		for cribline in file(sys.argv[1]):
+			if cribline[:3] == "D: ":
+				write_dance(cribline[3:].strip(), output)
+		output.write('\n')
