@@ -34,7 +34,7 @@ Analytics
 There's also an analytics script that parses the registration database to spit
 out some handy graphs about who's coming.  You probably want to make your own
 copy of that spreadsheet and update the URL underneath "registration.csv:" in
-the Makefile.
+the Makefile.  Have a look at analytics.py if you want details.
 
 Cribs
 =====
