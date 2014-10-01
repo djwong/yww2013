@@ -45,9 +45,9 @@ refresh of individual dance descriptions.
 The site is set up to generate two cribs: one for the ceilidh and one for the
 ball.  There are two files, ceilidh.txt and ball.txt, which list the dances:
 
-D: Reel of the 51st Division
-D: The Flowers of Edinburgh
-I: Ending Waltz
+	D: Reel of the 51st Division
+	D: The Flowers of Edinburgh
+	I: Ending Waltz
 
 A line starting with "I: " will have the rest of the line copied straight into
 the HTML crib.  A line starting with "D: " is used to find a dance description.
@@ -55,7 +55,7 @@ To find a dance description, take the name of the dance, convert spaces (' ')
 to underscores (' _ '), the uppercase letters to lowercase, and remove the
 punctuation.  This file will be found in the dances/ directory with ".txt"
 after it.  Therefore, the instructions for "D: Miss Milligan's S'spey" are in
-"dances/miss _ milligans _ sspey.txt".
+"dances/miss_milligans _ sspey.txt".
 
 The dance files themselves consist of a few lines of colon-delimited key-value
 pairs establishing metadata about the dance, the word "BARS" on a line by
@@ -64,15 +64,15 @@ Each dance MUST have at least a "Name", a "Format", and a "Source".  Other
 possible keys are "Youtube" (videos), and "Notes" (general notes).  A sample
 would look like this:
 
-Name: Miss Milligan’s Strathspey
-Youtube: qlNjsQAKff8
-Format: 8×32S, 3C (4C set)
-Source: Golden Jubilee Dances
-BARS
-1- 8    1s+2s circle 4H round to left, 1s turn to face 2s & set, 1s cast while 2s dance up
- 9-16   2s+1s+3s dance reflection reels of 3 on own sides 1s dancing in between 3s to start
-17-24   2s+1s+3s set, 2s+1s ½ turn LH, 1s followed by 2s lead down between 3s, cross & cast up on own sides
-25-32   1s+2s dance the Knot
+	Name: Miss Milligan’s Strathspey
+	Youtube: qlNjsQAKff8
+	Format: 8×32S, 3C (4C set)
+	Source: Golden Jubilee Dances
+	BARS
+	1-8	1s+2s circle 4H round to left, 1s turn to face 2s & set, 1s cast while 2s dance up
+	9-16	2s+1s+3s dance reflection reels of 3 on own sides 1s dancing in between 3s to start
+	17-24	2s+1s+3s set, 2s+1s ½ turn LH, 1s followed by 2s lead down between 3s, cross & cast up on own sides
+	25-32	1s+2s dance the Knot
 
 (Note that this format enables fairly easy cut-and-paste from the Scottish
 Dance Dictionary site.)
